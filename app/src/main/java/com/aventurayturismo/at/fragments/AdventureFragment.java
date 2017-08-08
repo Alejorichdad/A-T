@@ -11,17 +11,17 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.aventurayturismo.at.R;
-import com.aventurayturismo.at.adapters.PlaceAdapter;
-import com.aventurayturismo.at.models.Place;
+import com.aventurayturismo.at.adapters.AdventureAdapter;
+import com.aventurayturismo.at.models.Adventure;
 
 import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link PlaceFragment#newInstance} factory method to
+ * Use the {@link AdventureFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class PlaceFragment extends Fragment {
+public class AdventureFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -32,12 +32,12 @@ public class PlaceFragment extends Fragment {
     private String mParam2;
 
 
-    public PlaceFragment() {
+    public AdventureFragment() {
         // Required empty public constructor
     }
 
-    public static PlaceFragment newInstance() {
-        PlaceFragment fragment = new PlaceFragment();
+    public static AdventureFragment newInstance() {
+        AdventureFragment fragment = new AdventureFragment();
         return fragment;
     }
 
@@ -54,20 +54,19 @@ public class PlaceFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        View v = inflater.inflate(R.layout.fragment_adventure, container, false);
 
-        View v = inflater.inflate(R.layout.fragment_place, container, false);
+        ArrayList<Adventure> items = new ArrayList<>();
 
-        ArrayList<Place> items = new ArrayList<>();
+        items.add(new Adventure(R.drawable.av));
+        items.add(new Adventure(R.drawable.av));
+        items.add(new Adventure(R.drawable.av));
+        items.add(new Adventure(R.drawable.av));
 
-        items.add(new Place(R.drawable.apulo));
-        items.add(new Place(R.drawable.anapoima));
-        items.add(new Place(R.drawable.tocaima));
-        items.add(new Place(R.drawable.lamesa));
-
-        RecyclerView recycler = (RecyclerView)v.findViewById(R.id.placeRecycler);
+        RecyclerView recycler = (RecyclerView)v.findViewById(R.id.adventureRecycler);
         recycler.setHasFixedSize(true);
 
-        PlaceAdapter adapter = new PlaceAdapter(items);
+        AdventureAdapter adapter = new AdventureAdapter(items);
         recycler.setAdapter(adapter);
 
         LinearLayoutManager layoutManager =  new LinearLayoutManager(getContext());
@@ -77,8 +76,6 @@ public class PlaceFragment extends Fragment {
         Log.e("ITEMS:", items.toString());
 
         return v;
-
-
     }
 
 }

@@ -1,23 +1,26 @@
 package com.aventurayturismo.at;
 
-import android.support.design.widget.TabLayout;
+import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-
 import android.widget.TextView;
+
+import com.aventurayturismo.at.fragments.AdventureFragment;
+import com.aventurayturismo.at.fragments.ChatFragment;
+import com.aventurayturismo.at.fragments.GeoFragment;
+import com.aventurayturismo.at.fragments.PlaceFragment;
 
 public class MapsActivity extends AppCompatActivity {
 
@@ -120,7 +123,7 @@ public class MapsActivity extends AppCompatActivity {
             if (getArguments().getInt(ARG_SECTION_NUMBER) == 1)
 
             {
-                View rootView = inflater.inflate(R.layout.fragment_aventure, container, false);
+                View rootView = inflater.inflate(R.layout.fragment_adventure, container, false);
                 return rootView;
             }
 
@@ -167,7 +170,18 @@ public class MapsActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
-            return PlaceholderFragment.newInstance(position + 1);
+            switch (position){
+                case 0:
+                    return AdventureFragment.newInstance();
+                case 1:
+                    return PlaceFragment.newInstance();
+                case 2:
+                    return GeoFragment.newInstance();
+                case 3:
+                    return ChatFragment.newInstance();
+                default:
+                    return AdventureFragment.newInstance();
+            }
         }
 
         @Override
