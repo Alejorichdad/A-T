@@ -1,11 +1,10 @@
-package com.aventurayturismo.at.adapters;
+package com.aventurayturismo.at.adapters.cities;
 
 import android.content.Context;
 import android.content.Intent;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,29 +14,29 @@ import android.widget.Toast;
 import com.aventurayturismo.at.R;
 import com.aventurayturismo.at.fragments.anapoima.AnapoimaFragment;
 import com.aventurayturismo.at.fragments.apulo.ApuloFragment;
-import com.aventurayturismo.at.models.Place;
+import com.aventurayturismo.at.models.cities.Apulo;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
 /**
- * Created by willians on 7/8/17.
+ * Created by willians on 10/8/17.
  */
 
-public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlaceViewHolder> {
-    private ArrayList<Place> items;
+public class ApuloAdapter extends RecyclerView.Adapter<ApuloAdapter.ApuloViewHolder> {
+    private ArrayList<Apulo> items;
     Context context;
     private Intent intent;
     ViewPager viewPager;
 
-    public class PlaceViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public class ApuloViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         // campos respectivos de un item
         public ImageView idImagen;
         AppCompatActivity activity;
         ApuloFragment apuloFragment;
         AnapoimaFragment anapoimaFragment;
 
-        public PlaceViewHolder (View v){
+        public ApuloViewHolder (View v){
             super(v);
             context = v.getContext();
             itemView.setOnClickListener(this);
@@ -52,17 +51,11 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlaceViewHol
             activity = (AppCompatActivity) v.getContext();
             switch (getLayoutPosition()){
                 case 0:
-                    Toast.makeText(v.getContext(),"CLIKC", Toast.LENGTH_SHORT).show();
-                    apuloFragment = new ApuloFragment();
-                    activity.getSupportFragmentManager().beginTransaction().replace(R.id.placeFragment, apuloFragment).commit();
-                    Log.d("ACTIVITY 0", "fragment"+activity.getSupportFragmentManager().beginTransaction());
+                    Toast.makeText(v.getContext(),"DETALLE", Toast.LENGTH_SHORT).show();
                     break;
                 case 1:
-                    anapoimaFragment = new AnapoimaFragment();
-                    activity.getSupportFragmentManager().beginTransaction().replace(R.id.placeFragment, anapoimaFragment).commit();
-                    Log.d("ACTIVITY 1", "fragment"+activity.getSupportFragmentManager().findFragmentById(R.id.placeFragment));
+                    Toast.makeText(v.getContext(),"DETALLE 2", Toast.LENGTH_SHORT).show();
                     break;
-
             }
         }
 
@@ -76,7 +69,7 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlaceViewHol
         }
     }
 
-    public PlaceAdapter(ArrayList<Place> items){
+    public ApuloAdapter(ArrayList<Apulo> items){
         this.items = items;
     }
 
@@ -86,16 +79,15 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlaceViewHol
     }
 
     @Override
-    public PlaceViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
+    public ApuloAdapter.ApuloViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View v = LayoutInflater.from(viewGroup.getContext())
-                .inflate(R.layout.place_card, viewGroup, false);
-        return new PlaceViewHolder(v);
+                .inflate(R.layout.apulo_card, viewGroup, false);
+        return new ApuloAdapter.ApuloViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(PlaceViewHolder viewHolder, int i) {
-        Place currentItem = items.get(i);
+    public void onBindViewHolder(ApuloAdapter.ApuloViewHolder viewHolder, int i) {
+        Apulo currentItem = items.get(i);
         viewHolder.setImage(currentItem.getIdImagen());
     }
-
 }
