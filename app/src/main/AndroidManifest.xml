@@ -24,7 +24,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
 
         <!--
@@ -43,9 +42,11 @@
 
         <activity
             android:name=".MapsquitarActivity"
-            android:label="@string/title_activity_mapsquitar">
-
-        </activity>
+            android:label="@string/title_activity_mapsquitar" />
+        <activity android:name=".cities.ApuloActivity" />
+        <activity android:name=".cities.AnapoimaActivity" />
+        <activity android:name=".details.ApuloDetailActivity" />
+        <activity android:name=".details.AnapoimaDetailActivity"></activity>
     </application>
 
 </manifest>

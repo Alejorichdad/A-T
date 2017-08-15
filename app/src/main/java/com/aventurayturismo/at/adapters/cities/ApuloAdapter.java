@@ -9,13 +9,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.Toast;
+import android.widget.TextView;
 
 import com.aventurayturismo.at.R;
+import com.aventurayturismo.at.details.ApuloDetailActivity;
 import com.aventurayturismo.at.fragments.anapoima.AnapoimaFragment;
 import com.aventurayturismo.at.fragments.apulo.ApuloFragment;
 import com.aventurayturismo.at.models.cities.Apulo;
+import com.aventurayturismo.at.models.detail.DetailApulo;
 import com.squareup.picasso.Picasso;
+
+import org.json.JSONException;
 
 import java.util.ArrayList;
 
@@ -29,9 +33,18 @@ public class ApuloAdapter extends RecyclerView.Adapter<ApuloAdapter.ApuloViewHol
     private Intent intent;
     ViewPager viewPager;
 
+    public String title;
+    public String description;
+    public String phone;
+    public String email;
+    public String coords;
+    public int image;
+
     public class ApuloViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         // campos respectivos de un item
         public ImageView idImagen;
+        public TextView titulo_imagen;
+        public TextView beneficio;
         AppCompatActivity activity;
         ApuloFragment apuloFragment;
         AnapoimaFragment anapoimaFragment;
@@ -51,10 +64,48 @@ public class ApuloAdapter extends RecyclerView.Adapter<ApuloAdapter.ApuloViewHol
             activity = (AppCompatActivity) v.getContext();
             switch (getLayoutPosition()){
                 case 0:
-                    Toast.makeText(v.getContext(),"DETALLE", Toast.LENGTH_SHORT).show();
+                    try {
+                        title = (String) DetailApulo.getDetailApulo().getJSONObject("item1").get("title");
+                        description = (String) DetailApulo.getDetailApulo().getJSONObject("item1").get("description");
+                        phone = (String) DetailApulo.getDetailApulo().getJSONObject("item1").get("phone");
+                        email = (String) DetailApulo.getDetailApulo().getJSONObject("item1").get("email");
+                        coords = (String) DetailApulo.getDetailApulo().getJSONObject("item1").get("coords");
+                        image = (int) DetailApulo.getDetailApulo().getJSONObject("item1").get("image");
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    //Toast.makeText(v.getContext(), "CLIKC Alianza items", Toast.LENGTH_SHORT).show();
+                    intent = new Intent(context, ApuloDetailActivity.class);
+                    intent.putExtra("title", title);
+                    intent.putExtra("description", description);
+                    intent.putExtra("phone", phone);
+                    intent.putExtra("email", email);
+                    intent.putExtra("coords", coords);
+                    intent.putExtra("image", image);
+                    context.startActivity(intent);
                     break;
                 case 1:
-                    Toast.makeText(v.getContext(),"DETALLE 2", Toast.LENGTH_SHORT).show();
+                    try {
+                        title = (String) DetailApulo.getDetailApulo().getJSONObject("item1").get("title");
+                        description = (String) DetailApulo.getDetailApulo().getJSONObject("item1").get("description");
+                        phone = (String) DetailApulo.getDetailApulo().getJSONObject("item1").get("phone");
+                        email = (String) DetailApulo.getDetailApulo().getJSONObject("item1").get("email");
+                        coords = (String) DetailApulo.getDetailApulo().getJSONObject("item1").get("coords");
+                        image = (int) DetailApulo.getDetailApulo().getJSONObject("item1").get("image");
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    //Toast.makeText(v.getContext(), "CLIKC Alianza items", Toast.LENGTH_SHORT).show();
+                    intent = new Intent(context, ApuloDetailActivity.class);
+                    intent.putExtra("title", title);
+                    intent.putExtra("description", description);
+                    intent.putExtra("phone", phone);
+                    intent.putExtra("email", email);
+                    intent.putExtra("coords", coords);
+                    intent.putExtra("image", image);
+                    context.startActivity(intent);
                     break;
             }
         }

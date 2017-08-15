@@ -9,13 +9,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.aventurayturismo.at.R;
+import com.aventurayturismo.at.details.AnapoimaDetailActivity;
 import com.aventurayturismo.at.fragments.anapoima.AnapoimaFragment;
 import com.aventurayturismo.at.fragments.apulo.ApuloFragment;
 import com.aventurayturismo.at.models.cities.Anapoima;
+import com.aventurayturismo.at.models.detail.DetailAnapoima;
 import com.squareup.picasso.Picasso;
+
+import org.json.JSONException;
 
 import java.util.ArrayList;
 
@@ -28,6 +31,13 @@ public class AnapoimaAdapter extends RecyclerView.Adapter<AnapoimaAdapter.Anapoi
     Context context;
     private Intent intent;
     ViewPager viewPager;
+
+    public String title;
+    public String description;
+    public String phone;
+    public String email;
+    public String coords;
+    public int image;
 
     public class AnapoimaViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         // campos respectivos de un item
@@ -51,10 +61,48 @@ public class AnapoimaAdapter extends RecyclerView.Adapter<AnapoimaAdapter.Anapoi
             activity = (AppCompatActivity) v.getContext();
             switch (getLayoutPosition()){
                 case 0:
-                    Toast.makeText(v.getContext(),"DETALLE", Toast.LENGTH_SHORT).show();
+                    try {
+                        title = (String) DetailAnapoima.getDetailAnapoima().getJSONObject("item1").get("title");
+                        description = (String) DetailAnapoima.getDetailAnapoima().getJSONObject("item1").get("description");
+                        phone = (String) DetailAnapoima.getDetailAnapoima().getJSONObject("item1").get("phone");
+                        email = (String) DetailAnapoima.getDetailAnapoima().getJSONObject("item1").get("email");
+                        coords = (String) DetailAnapoima.getDetailAnapoima().getJSONObject("item1").get("coords");
+                        image = (int) DetailAnapoima.getDetailAnapoima().getJSONObject("item1").get("image");
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    //Toast.makeText(v.getContext(), "CLIKC Alianza items", Toast.LENGTH_SHORT).show();
+                    intent = new Intent(context, AnapoimaDetailActivity.class);
+                    intent.putExtra("title", title);
+                    intent.putExtra("description", description);
+                    intent.putExtra("phone", phone);
+                    intent.putExtra("email", email);
+                    intent.putExtra("coords", coords);
+                    intent.putExtra("image", image);
+                    context.startActivity(intent);
                     break;
                 case 1:
-                    Toast.makeText(v.getContext(),"DETALLE 2", Toast.LENGTH_SHORT).show();
+                    try {
+                        title = (String) DetailAnapoima.getDetailAnapoima().getJSONObject("item1").get("title");
+                        description = (String) DetailAnapoima.getDetailAnapoima().getJSONObject("item1").get("description");
+                        phone = (String) DetailAnapoima.getDetailAnapoima().getJSONObject("item1").get("phone");
+                        email = (String) DetailAnapoima.getDetailAnapoima().getJSONObject("item1").get("email");
+                        coords = (String) DetailAnapoima.getDetailAnapoima().getJSONObject("item1").get("coords");
+                        image = (int) DetailAnapoima.getDetailAnapoima().getJSONObject("item1").get("image");
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    //Toast.makeText(v.getContext(), "CLIKC Alianza items", Toast.LENGTH_SHORT).show();
+                    intent = new Intent(context, AnapoimaDetailActivity.class);
+                    intent.putExtra("title", title);
+                    intent.putExtra("description", description);
+                    intent.putExtra("phone", phone);
+                    intent.putExtra("email", email);
+                    intent.putExtra("coords", coords);
+                    intent.putExtra("image", image);
+                    context.startActivity(intent);
                     break;
             }
         }
