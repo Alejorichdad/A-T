@@ -6,4 +6,21 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_mapsquitar">Map</string>
+
+    <string name="titulo_imagen1">Titulo imagen</string>
+    <string name="beneficio1">Beneficio</string>
+
+
+    <string name="apulo_title">Apulo title</string>
+    <string name="apulo_description">Apulo description</string>
+
+    <string name="anapoima_title">Anapoima</string>
+    <string name="anapoima_description">Anapoima description</string>
+
+    <string name="tocaima_title">Tocaima title</string>
+    <string name="tocaima_description">Tocaima description</string>
+
+    <string name="lamesa_title">Lamsea title</string>
+    <string name="lamesa_description">lamesa description</string>
+
 </resources>

@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.aventurayturismo.at.R;
 import com.aventurayturismo.at.cities.AnapoimaActivity;
@@ -33,6 +34,8 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlaceViewHol
     public class PlaceViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         // campos respectivos de un item
         public ImageView idImagen;
+        public TextView titulo_imagen;
+        public TextView beneficio;
         AppCompatActivity activity;
         ApuloFragment apuloFragment;
         AnapoimaFragment anapoimaFragment;
@@ -42,6 +45,8 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlaceViewHol
             context = v.getContext();
             itemView.setOnClickListener(this);
 
+            titulo_imagen = (TextView) v.findViewById(R.id.titulo_imagen);
+            beneficio = (TextView) v.findViewById(R.id.beneficio);
             idImagen = (ImageView) v.findViewById(R.id.apulo);
 
         }
@@ -59,6 +64,14 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlaceViewHol
                     break;
 
             }
+        }
+
+        public void setTitle(String title){
+            titulo_imagen.setText(title);
+        }
+
+        public void setBenefit(String benefit){
+            beneficio.setText(benefit);
         }
 
         public void setImage(int urlImg){
@@ -90,6 +103,8 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlaceViewHol
     @Override
     public void onBindViewHolder(PlaceViewHolder viewHolder, int i) {
         Place currentItem = items.get(i);
+        viewHolder.setTitle(currentItem.getTitulo_imagen());
+        viewHolder.setBenefit(currentItem.getBeneficio());
         viewHolder.setImage(currentItem.getIdImagen());
     }
 

@@ -54,6 +54,8 @@ public class ApuloAdapter extends RecyclerView.Adapter<ApuloAdapter.ApuloViewHol
             context = v.getContext();
             itemView.setOnClickListener(this);
 
+            titulo_imagen = (TextView) v.findViewById(R.id.titulo_imagen);
+            beneficio = (TextView) v.findViewById(R.id.beneficio);
             idImagen = (ImageView) v.findViewById(R.id.apulo);
 
         }
@@ -110,6 +112,15 @@ public class ApuloAdapter extends RecyclerView.Adapter<ApuloAdapter.ApuloViewHol
             }
         }
 
+
+        public void setTitle(String title){
+            titulo_imagen.setText(title);
+        }
+
+        public void setBenefit(String benefit){
+            beneficio.setText(benefit);
+        }
+
         public void setImage(int urlImg){
             //Log.e(context.toString(),"ssss");
             Picasso.with(context)
@@ -139,6 +150,8 @@ public class ApuloAdapter extends RecyclerView.Adapter<ApuloAdapter.ApuloViewHol
     @Override
     public void onBindViewHolder(ApuloAdapter.ApuloViewHolder viewHolder, int i) {
         Apulo currentItem = items.get(i);
+        viewHolder.setTitle(currentItem.getTitulo_imagen());
+        viewHolder.setBenefit(currentItem.getBeneficio());
         viewHolder.setImage(currentItem.getIdImagen());
     }
 }

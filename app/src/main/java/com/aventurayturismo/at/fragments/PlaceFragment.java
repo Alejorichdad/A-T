@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -59,10 +58,10 @@ public class PlaceFragment extends Fragment {
 
         ArrayList<Place> items = new ArrayList<>();
 
-        items.add(new Place(R.drawable.apulo));
-        items.add(new Place(R.drawable.anapoima));
-        items.add(new Place(R.drawable.tocaima));
-        items.add(new Place(R.drawable.lamesa));
+        items.add(new Place(R.drawable.apulo, this.getString(R.string.apulo_title), this.getString(R.string.apulo_description)));
+        items.add(new Place(R.drawable.anapoima, this.getString(R.string.anapoima_title), this.getString(R.string.anapoima_description)));
+        items.add(new Place(R.drawable.tocaima, this.getString(R.string.tocaima_title), this.getString(R.string.tocaima_description)));
+        items.add(new Place(R.drawable.lamesa, this.getString(R.string.lamesa_title), this.getString(R.string.lamesa_description)));
 
         RecyclerView recycler = (RecyclerView)v.findViewById(R.id.placeRecycler);
         recycler.setHasFixedSize(true);
@@ -73,8 +72,6 @@ public class PlaceFragment extends Fragment {
         LinearLayoutManager layoutManager =  new LinearLayoutManager(getContext());
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recycler.setLayoutManager(layoutManager);
-
-        Log.e("ITEMS:", items.toString());
 
         return v;
 

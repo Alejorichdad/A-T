@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.aventurayturismo.at.R;
 import com.aventurayturismo.at.details.AnapoimaDetailActivity;
@@ -42,6 +43,8 @@ public class AnapoimaAdapter extends RecyclerView.Adapter<AnapoimaAdapter.Anapoi
     public class AnapoimaViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         // campos respectivos de un item
         public ImageView idImagen;
+        public TextView titulo_imagen;
+        public TextView beneficio;
         AppCompatActivity activity;
         ApuloFragment apuloFragment;
         AnapoimaFragment anapoimaFragment;
@@ -51,6 +54,8 @@ public class AnapoimaAdapter extends RecyclerView.Adapter<AnapoimaAdapter.Anapoi
             context = v.getContext();
             itemView.setOnClickListener(this);
 
+            titulo_imagen = (TextView) v.findViewById(R.id.titulo_imagen);
+            beneficio = (TextView) v.findViewById(R.id.beneficio);
             idImagen = (ImageView) v.findViewById(R.id.apulo);
 
         }
@@ -84,12 +89,12 @@ public class AnapoimaAdapter extends RecyclerView.Adapter<AnapoimaAdapter.Anapoi
                     break;
                 case 1:
                     try {
-                        title = (String) DetailAnapoima.getDetailAnapoima().getJSONObject("item1").get("title");
-                        description = (String) DetailAnapoima.getDetailAnapoima().getJSONObject("item1").get("description");
-                        phone = (String) DetailAnapoima.getDetailAnapoima().getJSONObject("item1").get("phone");
-                        email = (String) DetailAnapoima.getDetailAnapoima().getJSONObject("item1").get("email");
-                        coords = (String) DetailAnapoima.getDetailAnapoima().getJSONObject("item1").get("coords");
-                        image = (int) DetailAnapoima.getDetailAnapoima().getJSONObject("item1").get("image");
+                        title = (String) DetailAnapoima.getDetailAnapoima().getJSONObject("item2").get("title");
+                        description = (String) DetailAnapoima.getDetailAnapoima().getJSONObject("item2").get("description");
+                        phone = (String) DetailAnapoima.getDetailAnapoima().getJSONObject("item2").get("phone");
+                        email = (String) DetailAnapoima.getDetailAnapoima().getJSONObject("item2").get("email");
+                        coords = (String) DetailAnapoima.getDetailAnapoima().getJSONObject("item2").get("coords");
+                        image = (int) DetailAnapoima.getDetailAnapoima().getJSONObject("item2").get("image");
 
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -105,6 +110,14 @@ public class AnapoimaAdapter extends RecyclerView.Adapter<AnapoimaAdapter.Anapoi
                     context.startActivity(intent);
                     break;
             }
+        }
+
+        public void setTitle(String title){
+            titulo_imagen.setText(title);
+        }
+
+        public void setBenefit(String benefit){
+            beneficio.setText(benefit);
         }
 
         public void setImage(int urlImg){
@@ -136,6 +149,8 @@ public class AnapoimaAdapter extends RecyclerView.Adapter<AnapoimaAdapter.Anapoi
     @Override
     public void onBindViewHolder(AnapoimaAdapter.AnapoimaViewHolder viewHolder, int i) {
         Anapoima currentItem = items.get(i);
+        viewHolder.setTitle(currentItem.getTitulo_imagen());
+        viewHolder.setBenefit(currentItem.getBeneficio());
         viewHolder.setImage(currentItem.getIdImagen());
     }
 }
