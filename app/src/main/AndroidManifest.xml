@@ -46,7 +46,8 @@
         <activity android:name=".cities.ApuloActivity" />
         <activity android:name=".cities.AnapoimaActivity" />
         <activity android:name=".details.ApuloDetailActivity" />
-        <activity android:name=".details.AnapoimaDetailActivity"></activity>
+        <activity android:name=".details.AnapoimaDetailActivity" />
+        <activity android:name=".adventure_details.AdventureDetailActivity"></activity>
     </application>
 
 </manifest>

@@ -9,8 +9,12 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.aventurayturismo.at.R;
+import com.aventurayturismo.at.adventure_details.AdventureDetailActivity;
 import com.aventurayturismo.at.models.Adventure;
+import com.aventurayturismo.at.models.detail.DetailAdventure;
 import com.squareup.picasso.Picasso;
+
+import org.json.JSONException;
 
 import java.util.ArrayList;
 
@@ -23,6 +27,13 @@ public class AdventureAdapter extends RecyclerView.Adapter<AdventureAdapter.Adve
     private ArrayList<Adventure> items;
     Context context;
     private Intent intent;
+
+    public String title;
+    public String description;
+    public String phone;
+    public String email;
+    public String coords;
+    public int image;
 
     public class AdventureViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         // campos respectivos de un item
@@ -43,10 +54,37 @@ public class AdventureAdapter extends RecyclerView.Adapter<AdventureAdapter.Adve
 
             switch (getLayoutPosition()){
                 case 0:
-                    //intent = new Intent(context, NationalAlianceActivity.class);
-                    //context.startActivity(intent);
-                    break;
+                    try {
+                        title = (String) DetailAdventure.getDetailAdventure().getJSONObject("item1").get("title");
+                        description = (String) DetailAdventure.getDetailAdventure().getJSONObject("item1").get("description");
+                        image = (int) DetailAdventure.getDetailAdventure().getJSONObject("item1").get("image");
 
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    //Toast.makeText(v.getContext(), "CLIKC Alianza items", Toast.LENGTH_SHORT).show();
+                    intent = new Intent(context, AdventureDetailActivity.class);
+                    intent.putExtra("title", title);
+                    intent.putExtra("description", description);
+                    intent.putExtra("image", image);
+                    context.startActivity(intent);
+                    break;
+                case 1:
+                    try {
+                        title = (String) DetailAdventure.getDetailAdventure().getJSONObject("item2").get("title");
+                        description = (String) DetailAdventure.getDetailAdventure().getJSONObject("item2").get("description");
+                        image = (int) DetailAdventure.getDetailAdventure().getJSONObject("item2").get("image");
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    //Toast.makeText(v.getContext(), "CLIKC Alianza items", Toast.LENGTH_SHORT).show();
+                    intent = new Intent(context, AdventureDetailActivity.class);
+                    intent.putExtra("title", title);
+                    intent.putExtra("description", description);
+                    intent.putExtra("image", image);
+                    context.startActivity(intent);
+                    break;
             }
         }
 
