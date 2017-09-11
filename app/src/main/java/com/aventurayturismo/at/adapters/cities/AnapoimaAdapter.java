@@ -27,7 +27,7 @@ import java.util.ArrayList;
  * Created by willians on 10/8/17.
  */
 
-public class AnapoimaAdapter extends RecyclerView.Adapter<AnapoimaAdapter.AnapoimaViewHolder> {
+public class  AnapoimaAdapter extends RecyclerView.Adapter<AnapoimaAdapter.AnapoimaViewHolder> {
     private ArrayList<Anapoima> items;
     Context context;
     private Intent intent;

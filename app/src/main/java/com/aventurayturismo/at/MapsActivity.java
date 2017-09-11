@@ -137,15 +137,15 @@ public class MapsActivity extends AppCompatActivity {
             else if (getArguments().getInt(ARG_SECTION_NUMBER) == 3)
 
             {
-                View rootView = inflater.inflate(R.layout.fragment_geo, container, false);
+                View rootView = inflater.inflate(R.layout.fragment_chat, container, false);
                 return rootView;
             }
-            else if (getArguments().getInt(ARG_SECTION_NUMBER) == 4)
+         /*   else if (getArguments().getInt(ARG_SECTION_NUMBER) == 4)
 
             {
                 View rootView = inflater.inflate(R.layout.fragment_chat, container, false);
                 return rootView;
-            }
+            }*/
             else {
 
                 View rootView = inflater.inflate(R.layout.fragment_maps, container, false);
@@ -176,9 +176,9 @@ public class MapsActivity extends AppCompatActivity {
                 case 1:
                     return PlaceFragment.newInstance();
                 case 2:
-                    return GeoFragment.newInstance();
-                case 3:
                     return ChatFragment.newInstance();
+             //   case 3:
+               //     return GeoFragment.newInstance();
                 default:
                     return AdventureFragment.newInstance();
             }
@@ -187,7 +187,7 @@ public class MapsActivity extends AppCompatActivity {
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 4;
+            return 3;
         }
 
         @Override
@@ -196,11 +196,11 @@ public class MapsActivity extends AppCompatActivity {
                 case 0:
                     return "AVENTURA ";
                 case 1:
-                    return "DESTINOS ";
+                    return "NATURALEZA";
                 case 2:
-                    return "CERCA ";
-                case 3:
-                    return "CHAT";
+                    return "BIENESTAR ";
+               // case 3:
+                  //  return "MAPS";
             }
             return null;
         }
