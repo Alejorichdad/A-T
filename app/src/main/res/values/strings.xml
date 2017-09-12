@@ -7,7 +7,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_mapsquitar">Map</string>
 
-    <string name="titulo_imagen1">Titulo imagen</string>
+    <string name="titulo_imagen1">Titulo imagen11</string>
     <string name="beneficio1">Beneficio</string>
 
 
@@ -22,5 +22,6 @@
 
     <string name="lamesa_title">Lamsea title</string>
     <string name="lamesa_description">lamesa description</string>
+    <string name="title_activity_adventure">AdventureActivity</string>
 
 </resources>

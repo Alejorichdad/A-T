@@ -30,8 +30,8 @@ public class DetailAnapoima {
 
     /* DATA */
 
-    public static String title1 = "titulo1";
-    public static String description1 = "description1";
+    public static String title1 = "Probando este titulo1";
+    public static String description1 = "description1 description1 description1";
     public static String phone1 = "12344567";
     public static String email1 = "some@gmail.com";
     public static int imageFile1 = R.drawable.anapoima;

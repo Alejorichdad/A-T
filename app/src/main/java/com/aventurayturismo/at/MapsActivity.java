@@ -9,6 +9,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -21,6 +22,10 @@ import com.aventurayturismo.at.fragments.AdventureFragment;
 import com.aventurayturismo.at.fragments.ChatFragment;
 import com.aventurayturismo.at.fragments.GeoFragment;
 import com.aventurayturismo.at.fragments.PlaceFragment;
+import com.aventurayturismo.at.models.cities.Anapoima;
+
+import java.util.ArrayList;
+import java.util.Map;
 
 public class MapsActivity extends AppCompatActivity {
 
@@ -43,6 +48,15 @@ public class MapsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
+
+        ArrayList<Map> items = new ArrayList<>();
+
+
+
+
+
+
+
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -120,7 +134,7 @@ public class MapsActivity extends AppCompatActivity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
 
-            if (getArguments().getInt(ARG_SECTION_NUMBER) == 1)
+           if (getArguments().getInt(ARG_SECTION_NUMBER) == 1)
 
             {
                 View rootView = inflater.inflate(R.layout.fragment_adventure, container, false);
@@ -140,12 +154,12 @@ public class MapsActivity extends AppCompatActivity {
                 View rootView = inflater.inflate(R.layout.fragment_chat, container, false);
                 return rootView;
             }
-         /*   else if (getArguments().getInt(ARG_SECTION_NUMBER) == 4)
+            else if (getArguments().getInt(ARG_SECTION_NUMBER) == 4)
 
             {
                 View rootView = inflater.inflate(R.layout.fragment_chat, container, false);
                 return rootView;
-            }*/
+            }
             else {
 
                 View rootView = inflater.inflate(R.layout.fragment_maps, container, false);
@@ -172,13 +186,13 @@ public class MapsActivity extends AppCompatActivity {
             // Return a PlaceholderFragment (defined as a static inner class below).
             switch (position){
                 case 0:
-                    return AdventureFragment.newInstance();
+                   return AdventureFragment.newInstance();
                 case 1:
                     return PlaceFragment.newInstance();
                 case 2:
                     return ChatFragment.newInstance();
-             //   case 3:
-               //     return GeoFragment.newInstance();
+                case 3:
+                  return GeoFragment.newInstance();
                 default:
                     return AdventureFragment.newInstance();
             }
@@ -186,21 +200,21 @@ public class MapsActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            // Show 3 total pages.
-            return 3;
+            // Show 4 total pages.
+            return 4;
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
             switch (position) {
-                case 0:
-                    return "AVENTURA ";
+              case 0:
+                    return "LA MESA";
                 case 1:
-                    return "NATURALEZA";
+                    return "QUE BUSCAS";
                 case 2:
-                    return "BIENESTAR ";
-               // case 3:
-                  //  return "MAPS";
+                    return "DATOS";
+                case 3:
+                   return "MAPS";
             }
             return null;
         }

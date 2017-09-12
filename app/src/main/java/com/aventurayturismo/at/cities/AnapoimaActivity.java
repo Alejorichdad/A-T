@@ -19,9 +19,13 @@ public class AnapoimaActivity extends AppCompatActivity {
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager lManager;
 
-    public static String titulo1 = "item title national 1";
+    public static String titulo1 = "Macadamia";
     public static int imageFile1 = R.drawable.anapoima;
-    public static String description1 = "item description national 1";
+    public static String description1 = "Parque aventura";
+
+    public static String titulo2 = "Makute";
+    public static int imageFile2 = R.drawable.anapoima;
+    public static String description2 = "Parque aventura extrema ";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +35,7 @@ public class AnapoimaActivity extends AppCompatActivity {
         ArrayList<Anapoima> items = new ArrayList<>();
 
         items.add(new Anapoima(imageFile1, titulo1, description1));
-        items.add(new Anapoima(imageFile1, titulo1, description1));
+        items.add(new Anapoima(imageFile2, titulo2, description2));
         items.add(new Anapoima(imageFile1, titulo1, description1));
         items.add(new Anapoima(imageFile1, titulo1, description1));
 

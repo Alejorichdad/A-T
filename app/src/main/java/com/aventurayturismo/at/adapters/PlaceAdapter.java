@@ -44,7 +44,6 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlaceViewHol
             super(v);
             context = v.getContext();
             itemView.setOnClickListener(this);
-
             titulo_imagen = (TextView) v.findViewById(R.id.titulo_imagen);
             beneficio = (TextView) v.findViewById(R.id.beneficio);
             idImagen = (ImageView) v.findViewById(R.id.apulo);

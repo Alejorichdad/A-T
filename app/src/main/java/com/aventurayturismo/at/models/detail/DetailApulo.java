@@ -30,15 +30,15 @@ public class DetailApulo {
 
     /* DATA */
 
-    public static String title1 = "titulo1";
-    public static String description1 = "description1";
+    public static String title1 = "probando esta titulo1";
+    public static String description1 = "probando esta description1 ";
     public static String phone1 = "12344567";
     public static String email1 = "some@gmail.com";
     public static int imageFile1 = R.drawable.apulo;
     public static String coords1 = "37.7749,-122.4194";
 
-    public static String title2 = "titulo2";
-    public static String description2 = "description2";
+    public static String title2 = "probando esta titulo2";
+    public static String description2 = " probando esta description2";
     public static String phone2 = "22344567";
     public static String email2 = "some@gmail.com";
     public static int imageFile2 = R.drawable.apulo;

@@ -17,7 +17,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="18dp"
             android:layout_gravity="center_horizontal"
             android:gravity="center_vertical"
             android:orientation="horizontal"
@@ -36,15 +36,14 @@
         <ImageView
             android:id="@+id/apulo"
             android:layout_width="match_parent"
-            android:layout_height="140dp"
+            android:layout_height="185dp"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="0.25"
             android:background="@drawable/av"
             android:scaleType="centerCrop" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="15dp"
             android:layout_gravity="center_horizontal"
             android:gravity="center_vertical"
             android:orientation="horizontal"

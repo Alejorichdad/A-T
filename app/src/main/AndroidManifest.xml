@@ -44,10 +44,12 @@
             android:name=".MapsquitarActivity"
             android:label="@string/title_activity_mapsquitar" />
         <activity android:name=".cities.ApuloActivity" />
+
         <activity android:name=".cities.AnapoimaActivity" />
         <activity android:name=".details.ApuloDetailActivity" />
         <activity android:name=".details.AnapoimaDetailActivity" />
-        <activity android:name=".adventure_details.AdventureDetailActivity"></activity>
+        <activity android:name=".adventure_details.AdventureDetailActivity" />
+
     </application>
 
 </manifest>
