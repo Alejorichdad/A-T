@@ -11,14 +11,14 @@
     <string name="beneficio1">Beneficio</string>
 
 
-    <string name="apulo_title">Apulo title</string>
-    <string name="apulo_description">Apulo description</string>
+    <string name="apulo_title">Aventura y Adrenalina</string>
+    <string name="apulo_description">Canopy, cuatrimotos, kayak</string>
 
-    <string name="anapoima_title">Anapoima</string>
-    <string name="anapoima_description">Anapoima description</string>
+    <string name="anapoima_title">Bienestar y tranquilidad</string>
+    <string name="anapoima_description">Hoteles, Spa, descanso, piscinas</string>
 
-    <string name="tocaima_title">Tocaima title</string>
-    <string name="tocaima_description">Tocaima description</string>
+    <string name="tocaima_title">Conectate con la naturaleza</string>
+    <string name="tocaima_description">Senderismo y caminos reales</string>
 
     <string name="lamesa_title">Lamsea title</string>
     <string name="lamesa_description">lamesa description</string>

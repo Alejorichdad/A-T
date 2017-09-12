@@ -137,14 +137,15 @@ public class MapsActivity extends AppCompatActivity {
            if (getArguments().getInt(ARG_SECTION_NUMBER) == 1)
 
             {
-                View rootView = inflater.inflate(R.layout.fragment_adventure, container, false);
+                View rootView = inflater.inflate(R.layout.fragment_place, container, false);
                 return rootView;
+
             }
 
             else if (getArguments().getInt(ARG_SECTION_NUMBER) == 2)
 
             {
-                View rootView = inflater.inflate(R.layout.fragment_place, container, false);
+                View rootView = inflater.inflate(R.layout.fragment_adventure, container, false);
                 return rootView;
             }
 
@@ -162,7 +163,7 @@ public class MapsActivity extends AppCompatActivity {
             }
             else {
 
-                View rootView = inflater.inflate(R.layout.fragment_maps, container, false);
+                View rootView = inflater.inflate(R.layout.fragment_place, container, false);
                 TextView textView = (TextView) rootView.findViewById(R.id.section_label);
                 textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
                 return rootView;
@@ -186,9 +187,9 @@ public class MapsActivity extends AppCompatActivity {
             // Return a PlaceholderFragment (defined as a static inner class below).
             switch (position){
                 case 0:
-                   return AdventureFragment.newInstance();
+                   return PlaceFragment.newInstance();
                 case 1:
-                    return PlaceFragment.newInstance();
+                    return AdventureFragment.newInstance();
                 case 2:
                     return ChatFragment.newInstance();
                 case 3:
@@ -208,9 +209,9 @@ public class MapsActivity extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             switch (position) {
               case 0:
-                    return "LA MESA";
-                case 1:
                     return "QUE BUSCAS";
+                case 1:
+                    return "LA MESA";
                 case 2:
                     return "DATOS";
                 case 3:
