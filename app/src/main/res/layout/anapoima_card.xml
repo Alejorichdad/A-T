@@ -41,7 +41,7 @@
             android:layout_height="140dp"
             android:layout_gravity="center_horizontal"
             android:layout_weight="0.25"
-            android:background="@drawable/anapoima"
+            android:background="@drawable/placeholder1"
             android:scaleType="centerCrop" />
 
         <LinearLayout

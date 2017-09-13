@@ -16,6 +16,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.aventurayturismo.at.fragments.AdventureFragment;
@@ -28,6 +29,8 @@ import java.util.ArrayList;
 import java.util.Map;
 
 public class MapsActivity extends AppCompatActivity {
+
+    private Button btn;
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide

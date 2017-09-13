@@ -19,13 +19,17 @@ public class AnapoimaActivity extends AppCompatActivity {
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager lManager;
 
-    public static String titulo1 = "Macadamia";
-    public static int imageFile1 = R.drawable.anapoima;
-    public static String description1 = "Parque aventura";
+    public static String titulo1 = "PARAISO TERRENAL";
+    public static int imageFile1 = R.drawable.paraisoterrenal;
+    public static String description1 = "DONDE CONCENTRARSE A DESCANSAR";
 
-    public static String titulo2 = "Makute";
-    public static int imageFile2 = R.drawable.anapoima;
-    public static String description2 = "Parque aventura extrema ";
+    public static String titulo2 = "HOTEL SAN JERÓNIMO";
+    public static int imageFile2 = R.drawable.hotelsanje;
+    public static String description2 = "DESTINO TURÍSTICO Y COMERCIAL";
+
+    public static String titulo3 = "PUERTA TURÍSTICA LA MESA";
+    public static int imageFile3 = R.drawable.puertaturistica;
+    public static String description3 = "RESERVA YA TU PRÓXIMO DESTINO";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +40,8 @@ public class AnapoimaActivity extends AppCompatActivity {
 
         items.add(new Anapoima(imageFile1, titulo1, description1));
         items.add(new Anapoima(imageFile2, titulo2, description2));
-        items.add(new Anapoima(imageFile1, titulo1, description1));
-        items.add(new Anapoima(imageFile1, titulo1, description1));
+        items.add(new Anapoima(imageFile3, titulo3, description3));
+        //items.add(new Anapoima(imageFile1, titulo4, description1));
 
         recycler = (RecyclerView) findViewById(R.id.recyclerAnapoima);
         recycler.setHasFixedSize(true);

@@ -109,6 +109,28 @@ public class  AnapoimaAdapter extends RecyclerView.Adapter<AnapoimaAdapter.Anapo
                     intent.putExtra("image", image);
                     context.startActivity(intent);
                     break;
+                case 2:
+                    try {
+                        title = (String) DetailAnapoima.getDetailAnapoima().getJSONObject("item3").get("title");
+                        description = (String) DetailAnapoima.getDetailAnapoima().getJSONObject("item3").get("description");
+                        phone = (String) DetailAnapoima.getDetailAnapoima().getJSONObject("item3").get("phone");
+                        email = (String) DetailAnapoima.getDetailAnapoima().getJSONObject("item3").get("email");
+                        coords = (String) DetailAnapoima.getDetailAnapoima().getJSONObject("item3").get("coords");
+                        image = (int) DetailAnapoima.getDetailAnapoima().getJSONObject("item3").get("image");
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    //Toast.makeText(v.getContext(), "CLIKC Alianza items", Toast.LENGTH_SHORT).show();
+                    intent = new Intent(context, AnapoimaDetailActivity.class);
+                    intent.putExtra("title", title);
+                    intent.putExtra("description", description);
+                    intent.putExtra("phone", phone);
+                    intent.putExtra("email", email);
+                    intent.putExtra("coords", coords);
+                    intent.putExtra("image", image);
+                    context.startActivity(intent);
+                    break;
             }
         }
 

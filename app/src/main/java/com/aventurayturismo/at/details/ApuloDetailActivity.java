@@ -14,6 +14,7 @@ import com.aventurayturismo.at.R;
 public class
 ApuloDetailActivity extends AppCompatActivity {
 
+
     TextView description;
     TextView title;
     String phoneNumber;

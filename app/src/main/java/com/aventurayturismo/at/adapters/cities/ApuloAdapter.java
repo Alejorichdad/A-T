@@ -89,12 +89,34 @@ public class ApuloAdapter extends RecyclerView.Adapter<ApuloAdapter.ApuloViewHol
                     break;
                 case 1:
                     try {
-                        title = (String) DetailApulo.getDetailApulo().getJSONObject("item1").get("title");
-                        description = (String) DetailApulo.getDetailApulo().getJSONObject("item1").get("description");
-                        phone = (String) DetailApulo.getDetailApulo().getJSONObject("item1").get("phone");
-                        email = (String) DetailApulo.getDetailApulo().getJSONObject("item1").get("email");
-                        coords = (String) DetailApulo.getDetailApulo().getJSONObject("item1").get("coords");
-                        image = (int) DetailApulo.getDetailApulo().getJSONObject("item1").get("image");
+                        title = (String) DetailApulo.getDetailApulo().getJSONObject("item2").get("title");
+                        description = (String) DetailApulo.getDetailApulo().getJSONObject("item2").get("description");
+                        phone = (String) DetailApulo.getDetailApulo().getJSONObject("item2").get("phone");
+                        email = (String) DetailApulo.getDetailApulo().getJSONObject("item2").get("email");
+                        coords = (String) DetailApulo.getDetailApulo().getJSONObject("item2").get("coords");
+                        image = (int) DetailApulo.getDetailApulo().getJSONObject("item2").get("image");
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    //Toast.makeText(v.getContext(), "CLIKC Alianza items", Toast.LENGTH_SHORT).show();
+                    intent = new Intent(context, ApuloDetailActivity.class);
+                    intent.putExtra("title", title);
+                    intent.putExtra("description", description);
+                    intent.putExtra("phone", phone);
+                    intent.putExtra("email", email);
+                    intent.putExtra("coords", coords);
+                    intent.putExtra("image", image);
+                    context.startActivity(intent);
+                    break;
+                case 2:
+                    try {
+                        title = (String) DetailApulo.getDetailApulo().getJSONObject("item3").get("title");
+                        description = (String) DetailApulo.getDetailApulo().getJSONObject("item3").get("description");
+                        phone = (String) DetailApulo.getDetailApulo().getJSONObject("item3").get("phone");
+                        email = (String) DetailApulo.getDetailApulo().getJSONObject("item3").get("email");
+                        coords = (String) DetailApulo.getDetailApulo().getJSONObject("item3").get("coords");
+                        image = (int) DetailApulo.getDetailApulo().getJSONObject("item3").get("image");
 
                     } catch (JSONException e) {
                         e.printStackTrace();

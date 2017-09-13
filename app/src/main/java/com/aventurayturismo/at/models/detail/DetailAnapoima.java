@@ -30,26 +30,28 @@ public class DetailAnapoima {
 
     /* DATA */
 
-    public static String title1 = "Probando este titulo1";
-    public static String description1 = "description1 description1 description1";
-    public static String phone1 = "12344567";
-    public static String email1 = "some@gmail.com";
-    public static int imageFile1 = R.drawable.anapoima;
-    public static String coords1 = "37.7749,-122.4194";
+    public static String title1 = "PARAISO TERRENAL";
+    public static String description1 = "Adecuadas habitaciones especialmente pensando en tu confort nuestros planes son Desde una simple caminata, hasta una gran reunión, solo o en pareja, todos basados en la conservación de nuestra madre tierra, el mejor espacio para disfrutar de la naturaleza.";
+    public static String phone1 = "320 217 4253";
+    public static String email1 = "aldemarlatorrebuitrago@gmail.com";
+    public static int imageFile1 = R.drawable.paraisoterrenal;
+    public static String coords1 = "4.698469, -74.433006";
 
-    public static String title2 = "titulo2";
-    public static String description2 = "description2";
-    public static String phone2 = "22344567";
-    public static String email2 = "some@gmail.com";
-    public static int imageFile2 = R.drawable.anapoima;
-    public static String coords2 = "37.7749,-122.4194";
 
-    public static String title3 = "titulo3";
-    public static String description3 = "description3";
-    public static String phone3 = "3344567";
-    public static String email3 = "some@gmail.com";
-    public static int imageFile3 = R.drawable.anapoima;
-    public static String coords3 = "37.7749,-122.4194";
+    public static String title2 = "HOTEL SAN JERÓNIMO";
+    public static String description2 = " El Centro Comercial y La Región del Tequendama y Alto Magdalena, cuenta con  lugares de exploración y aprovechamiento, que brindan experiencias productivas, lugares de contemplación, flora, fauna silvestre, espacios ideales para el turista aventurero, senderismo, ciclo montañismo, cabalgatas, recorridos en cuatrimotos, rapel, canopi, escalada, puente tibetano, barranquismo, escaladas, campin, sin dejar  a un lado los lugares del descanso total que brinda bienestar en nuestro nuevo servicio Hotel San Jerónimo. Contacto: 320 455 2215 - Email: sanjeronimo.comercial@outlook.es - http://centrocomercialsanjeronimo.com - ..";
+    public static String phone2 = "320 455 2215";
+    public static String email2 = "sanjeronimo.comercial@outlook.es";
+    public static int imageFile2 = R.drawable.hotelsanje;
+    public static String coords2 = "4.609013, -74.474571";
+
+
+    public static String title3 = "PUERTA TURÍSTICA LA MESA";
+    public static String description3 = "Somos una agencia donde podrás encontrar reservas para hoteles, fincas, Casas, además planes turísticos empresariales, grupos y familiares Contacto: Daniel Peñuela celular: 317 6409505 - www.puertaturisticacolombia.com/";
+    public static String phone3 = "317 6409505";
+    public static String email3 = "agenciaturisticaeinmobiliaria@gmail.com";
+    public static int imageFile3 = R.drawable.puertaturistica;
+    public static String coords3 = "4.632109, -74.462163";
 
     public static String title4 = "titulo4";
     public static String description4 = "description4";

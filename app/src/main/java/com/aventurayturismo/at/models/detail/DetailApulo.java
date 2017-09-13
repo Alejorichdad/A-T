@@ -30,26 +30,30 @@ public class DetailApulo {
 
     /* DATA */
 
-    public static String title1 = "probando esta titulo1";
-    public static String description1 = "probando esta description1 ";
-    public static String phone1 = "12344567";
-    public static String email1 = "some@gmail.com";
-    public static int imageFile1 = R.drawable.apulo;
-    public static String coords1 = "37.7749,-122.4194";
+    public static String title1 = "PARQUE MAKUTE";
+    public static String description1 = "Aventura Experiecial dirigido a grupos y organizaciones que quieren sensibilizar a sus equipos de trabajo en diversión, aprendizaje y cohesión grupal. Actividades con juegos de roles, competencia, Trabajo en equipo y outdoor training. Diseñamos cada evento a la medida del cliente. La Mesa, Cund. Cel: 310 558 1887 – comercial@parquemakute.com  www.parquemakute.com";
+    public static String phone1 = "310 558 1887";
+    public static String email1 = "comercial@parquemakute.com";
+    public static int imageFile1 = R.drawable.makute;
+    public static String coords1 = "4.648698, -74.440677";
 
-    public static String title2 = "probando esta titulo2";
-    public static String description2 = " probando esta description2";
-    public static String phone2 = "22344567";
-    public static String email2 = "some@gmail.com";
-    public static int imageFile2 = R.drawable.apulo;
-    public static String coords2 = "37.7749,-122.4194";
 
-    public static String title3 = "titulo3";
-    public static String description3 = "description3";
-    public static String phone3 = "3344567";
-    public static String email3 = "some@gmail.com";
-    public static int imageFile3 = R.drawable.apulo;
-    public static String coords3 = "37.7749,-122.4194";
+    public static String title2 = "WUAIRA TURISMO DE AVENTURA";
+    public static String description2 = "Ven y disfruta de turismo de aventura  y naturaleza en  Cuatrimoto, Fatbikes, Caballos, Caminatas, Cuerdas, Avistamiento, Cultura etc...\n" + "contactanos: celular: 310 556 6161, email: info@wuaira.com, http://www.wuaira.com/";
+    public static String phone2 = "310 556 6161";
+    public static String email2 = "info@wuaira.com";
+    public static int imageFile2 = R.drawable.wuaira;
+    public static String coords2 = "4.631390, -74.465830";
+
+    public static String title3 = "MACADAMIA BOSQUE AVENTURA";
+    public static String description3 = "Estás en busca de nuevas experencias\n" +
+            "Pregunta por nuestros planes en Pareja, Grupos Familiares, Empresariales, Institucionales, Cumpleaños, Excursiones, Campamentos infantiles...\n" +
+            "Aprende con experiencias y fortalece los valores del trabajo en equipo.\n" +
+            "Aventura, Vivencias y Armonía con el entorno.";
+    public static String phone3 = "300 258 2391";
+    public static String email3 = "info@macadamiabosqueaventura.com";
+    public static int imageFile3 = R.drawable.macadamia;
+    public static String coords3 = "4.644939, -74.448317";
 
     public static String title4 = "titulo4";
     public static String description4 = "description4";

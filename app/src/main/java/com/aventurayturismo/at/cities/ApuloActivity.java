@@ -19,10 +19,17 @@ public class ApuloActivity extends AppCompatActivity {
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager lManager;
 
-    public static String titulo1 = "item title national 1";
-    public static int imageFile1 = R.drawable.apulo;
-    public static String description1 = "item description national 1";
+    public static String titulo1 = "PARQUE MAKUTE";
+    public static int imageFile1 = R.drawable.makute;
+    public static String description1 = "AVENTURA EXPERIENCIAL DIRIGIDO A GRUPOS Y ORGANIZACIONES ";
 
+    public static String titulo2 = "WUAIRA CUATRIPASEOS";
+    public static int imageFile2 = R.drawable.wuaira;
+    public static String description2 = "CUATRIMOTOS, FATBIKES, CABALLOS, CAMINATAS, CUERDAS, AVISTAMIENTO, CULTURA, etc...";
+
+    public static String titulo3 = "MACADAMIA BOSQUE AVENTURA";
+    public static int imageFile3 = R.drawable.macadamia;
+    public static String description3 = "EXPERTOS EN DEPORTE DE AVENTURA Y EDUCACIÓN MEDIO AMBIENTAL";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +39,8 @@ public class ApuloActivity extends AppCompatActivity {
         ArrayList<Apulo> items = new ArrayList<>();
 
         items.add(new Apulo(imageFile1, titulo1, description1));
+        items.add(new Apulo(imageFile2, titulo2, description2));
+        items.add(new Apulo(imageFile3, titulo3, description3));
 
         recycler = (RecyclerView) findViewById(R.id.recyclerApulo);
         recycler.setHasFixedSize(true);
