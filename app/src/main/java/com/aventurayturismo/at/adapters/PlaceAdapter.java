@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.aventurayturismo.at.R;
 import com.aventurayturismo.at.cities.AnapoimaActivity;
 import com.aventurayturismo.at.cities.ApuloActivity;
+import com.aventurayturismo.at.cities.NaturalezaActivity;
 import com.aventurayturismo.at.fragments.anapoima.AnapoimaFragment;
 import com.aventurayturismo.at.fragments.apulo.ApuloFragment;
 import com.aventurayturismo.at.models.Place;
@@ -59,6 +60,10 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlaceViewHol
                     break;
                 case 1:
                     intent = new Intent(context, AnapoimaActivity.class);
+                    context.startActivity(intent);
+                    break;
+                case 2:
+                    intent = new Intent(context, NaturalezaActivity.class);
                     context.startActivity(intent);
                     break;
 

@@ -12,7 +12,7 @@
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
         <RelativeLayout
@@ -24,7 +24,7 @@
             <ImageView
                 android:id="@+id/idImagen"
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_height="250dp"
                 android:layout_gravity="center_horizontal"
                 android:src="@drawable/placeholder1"
                 android:scaleType="centerCrop" />
@@ -45,17 +45,19 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
             android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:padding="16dp">
+            android:padding="4dp"
+            android:layout_marginBottom="70dp"
+            android:weightSum="1">
 
 
             <TextView
                 android:id="@+id/beneficio"
                 android:layout_width="wrap_content"
-                android:layout_height="80dp"
+                android:layout_height="match_parent"
                 android:text="beneficio"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:maxLines="200"
@@ -66,16 +68,17 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:background="#fff"
             android:id="@+id/wrapperDetail"
             android:layout_alignBottom="@+id/firstNationalImg"
             android:layout_alignStart="@+id/firstNationalImg"
-            android:layout_marginTop="-10dp"
+            android:layout_marginTop="-63dp"
+            android:layout_marginEnd="@dimen/activity_vertical_margin"
             android:gravity="bottom">
 
             <ImageButton
-                android:layout_width="60dp"
+                android:layout_width="50dp"
                 android:layout_height="60dp"
                 android:src="@drawable/ic_maps"
                 android:layout_gravity="right"

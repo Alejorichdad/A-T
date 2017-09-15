@@ -60,7 +60,7 @@ public class PlaceFragment extends Fragment {
 
         items.add(new Place(R.drawable.aventura, this.getString(R.string.apulo_title), this.getString(R.string.apulo_description)));
         items.add(new Place(R.drawable.bienestar1, this.getString(R.string.anapoima_title), this.getString(R.string.anapoima_description)));
-        items.add(new Place(R.drawable.naturaleza, this.getString(R.string.tocaima_title), this.getString(R.string.tocaima_description)));
+        items.add(new Place(R.drawable.momentos, this.getString(R.string.tocaima_title), this.getString(R.string.tocaima_description)));
       //  items.add(new Place(R.drawable.lamesa, this.getString(R.string.lamesa_title), this.getString(R.string.lamesa_description)));
 
         RecyclerView recycler = (RecyclerView)v.findViewById(R.id.placeRecycler);

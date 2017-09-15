@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Turismo en La Mesa </string>
+    <string name="app_name">La Mesa Cundinamarca</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="google_maps_key">AIzaSyDtXXb5alDhoUh_MgNbMxA4y0w0K2NRkzc</string>
@@ -17,11 +17,13 @@
     <string name="anapoima_title">Bienestar y tranquilidad</string>
     <string name="anapoima_description">Hoteles, Spa, descanso, piscinas</string>
 
-    <string name="tocaima_title">Conectate con la naturaleza</string>
-    <string name="tocaima_description">Senderismo y caminos reales</string>
+    <string name="tocaima_title">Cómo va la Expo?</string>
+    <string name="tocaima_description">Retratamos buenos momentos</string>
 
     <string name="lamesa_title">Lamsea title</string>
     <string name="lamesa_description">lamesa description</string>
     <string name="title_activity_adventure">AdventureActivity</string>
+    <string name="title_activity_web_makute">WebMakuteActivity</string>
+    <string name="title_activity_naturaleza">NaturalezaActivity</string>
 
 </resources>

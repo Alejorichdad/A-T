@@ -205,16 +205,16 @@ public class MapsActivity extends AppCompatActivity {
         @Override
         public int getCount() {
             // Show 4 total pages.
-            return 4;
+            return 2;
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
             switch (position) {
               case 0:
-                    return "QUE BUSCAS";
+                    return "¿QUE BUSCAS?";
                 case 1:
-                    return "LA MESA";
+                    return "ATRACTIVOS";
                 case 2:
                     return "DATOS";
                 case 3:

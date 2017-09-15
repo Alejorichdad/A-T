@@ -3,10 +3,12 @@
     package="com.aventurayturismo.at">
 
     <!--
+         <uses-permission android:name="android.permission.INTERNET"/>
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the 'MyLocation' functionality. 
     -->
+
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
@@ -44,12 +46,18 @@
             android:name=".MapsquitarActivity"
             android:label="@string/title_activity_mapsquitar" />
         <activity android:name=".cities.ApuloActivity" />
-
         <activity android:name=".cities.AnapoimaActivity" />
         <activity android:name=".details.ApuloDetailActivity" />
         <activity android:name=".details.AnapoimaDetailActivity" />
         <activity android:name=".adventure_details.AdventureDetailActivity" />
-
+        <activity
+            android:name=".webViews.WebMakuteActivity"
+            android:label="@string/title_activity_web_makute"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".cities.NaturalezaActivity"
+            android:label="@string/title_activity_naturaleza"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

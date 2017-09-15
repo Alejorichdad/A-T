@@ -34,15 +34,15 @@ public class DetailAnapoima {
     public static String description1 = "Adecuadas habitaciones especialmente pensando en tu confort nuestros planes son Desde una simple caminata, hasta una gran reunión, solo o en pareja, todos basados en la conservación de nuestra madre tierra, el mejor espacio para disfrutar de la naturaleza.";
     public static String phone1 = "320 217 4253";
     public static String email1 = "aldemarlatorrebuitrago@gmail.com";
-    public static int imageFile1 = R.drawable.paraisoterrenal;
+    public static int imageFile1 = R  .drawable.paraisoterrenal;
     public static String coords1 = "4.698469, -74.433006";
 
 
-    public static String title2 = "HOTEL SAN JERÓNIMO";
+    public static String title2 = "CENTRO COMERCIAL SAN JERÓNIMO";
     public static String description2 = " El Centro Comercial y La Región del Tequendama y Alto Magdalena, cuenta con  lugares de exploración y aprovechamiento, que brindan experiencias productivas, lugares de contemplación, flora, fauna silvestre, espacios ideales para el turista aventurero, senderismo, ciclo montañismo, cabalgatas, recorridos en cuatrimotos, rapel, canopi, escalada, puente tibetano, barranquismo, escaladas, campin, sin dejar  a un lado los lugares del descanso total que brinda bienestar en nuestro nuevo servicio Hotel San Jerónimo. Contacto: 320 455 2215 - Email: sanjeronimo.comercial@outlook.es - http://centrocomercialsanjeronimo.com - ..";
     public static String phone2 = "320 455 2215";
     public static String email2 = "sanjeronimo.comercial@outlook.es";
-    public static int imageFile2 = R.drawable.hotelsanje;
+    public static int imageFile2 = R.drawable.sanjero;
     public static String coords2 = "4.609013, -74.474571";
 
 

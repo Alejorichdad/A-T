@@ -23,8 +23,8 @@ public class AnapoimaActivity extends AppCompatActivity {
     public static int imageFile1 = R.drawable.paraisoterrenal;
     public static String description1 = "DONDE CONCENTRARSE A DESCANSAR";
 
-    public static String titulo2 = "HOTEL SAN JERÓNIMO";
-    public static int imageFile2 = R.drawable.hotelsanje;
+    public static String titulo2 = "CENTRO COMERCIAL SAN JERÓNIMO";
+    public static int imageFile2 = R.drawable.sanjero;
     public static String description2 = "DESTINO TURÍSTICO Y COMERCIAL";
 
     public static String titulo3 = "PUERTA TURÍSTICA LA MESA";
