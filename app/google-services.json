@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "443388322181",
+    "firebase_url": "https://aventura-y-turismo.firebaseio.com",
+    "project_id": "aventura-y-turismo",
+    "storage_bucket": "aventura-y-turismo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:443388322181:android:6b9e18329d8e56d6",
+        "android_client_info": {
+          "package_name": "mapas_turist.probandomapas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "443388322181-dgpbo5t0nlq9a751g8vpp4qc17lvghuo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDujM-Y8TLGBYXvS3hgeuEW1hqiwyhfuYI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:443388322181:android:ae8fc725fa84f612",
+        "android_client_info": {
+          "package_name": "com.aventurayturismo.at"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "443388322181-dgpbo5t0nlq9a751g8vpp4qc17lvghuo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDujM-Y8TLGBYXvS3hgeuEW1hqiwyhfuYI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
