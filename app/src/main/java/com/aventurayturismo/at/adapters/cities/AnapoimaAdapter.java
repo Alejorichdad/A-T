@@ -15,6 +15,7 @@ import com.aventurayturismo.at.R;
 import com.aventurayturismo.at.details.AnapoimaDetailActivity;
 import com.aventurayturismo.at.fragments.anapoima.AnapoimaFragment;
 import com.aventurayturismo.at.fragments.apulo.ApuloFragment;
+import com.aventurayturismo.at.fragments.comercial.ComercialFragment;
 import com.aventurayturismo.at.models.cities.Anapoima;
 import com.aventurayturismo.at.models.detail.DetailAnapoima;
 import com.squareup.picasso.Picasso;
@@ -48,6 +49,7 @@ public class  AnapoimaAdapter extends RecyclerView.Adapter<AnapoimaAdapter.Anapo
         AppCompatActivity activity;
         ApuloFragment apuloFragment;
         AnapoimaFragment anapoimaFragment;
+        ComercialFragment comercialFragment;
 
         public AnapoimaViewHolder (View v){
             super(v);
@@ -56,7 +58,7 @@ public class  AnapoimaAdapter extends RecyclerView.Adapter<AnapoimaAdapter.Anapo
 
             titulo_imagen = (TextView) v.findViewById(R.id.titulo_imagen);
             beneficio = (TextView) v.findViewById(R.id.beneficio);
-            idImagen = (ImageView) v.findViewById(R.id.apulo);
+            idImagen = (ImageView) v.findViewById(R.id.anapoima);
 
         }
 
@@ -73,6 +75,7 @@ public class  AnapoimaAdapter extends RecyclerView.Adapter<AnapoimaAdapter.Anapo
                         email = (String) DetailAnapoima.getDetailAnapoima().getJSONObject("item1").get("email");
                         coords = (String) DetailAnapoima.getDetailAnapoima().getJSONObject("item1").get("coords");
                         image = (int) DetailAnapoima.getDetailAnapoima().getJSONObject("item1").get("image");
+
 
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -131,7 +134,30 @@ public class  AnapoimaAdapter extends RecyclerView.Adapter<AnapoimaAdapter.Anapo
                     intent.putExtra("image", image);
                     context.startActivity(intent);
                     break;
+                case 3:
+                    try {
+                        title = (String) DetailAnapoima.getDetailAnapoima().getJSONObject("item4").get("title");
+                        description = (String) DetailAnapoima.getDetailAnapoima().getJSONObject("item4").get("description");
+                        phone = (String) DetailAnapoima.getDetailAnapoima().getJSONObject("item4").get("phone");
+                        email = (String) DetailAnapoima.getDetailAnapoima().getJSONObject("item4").get("email");
+                        coords = (String) DetailAnapoima.getDetailAnapoima().getJSONObject("item4").get("coords");
+                        image = (int) DetailAnapoima.getDetailAnapoima().getJSONObject("item4").get("image");
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    //Toast.makeText(v.getContext(), "CLIKC Alianza items", Toast.LENGTH_SHORT).show();
+                    intent = new Intent(context, AnapoimaDetailActivity.class);
+                    intent.putExtra("title", title);
+                    intent.putExtra("description", description);
+                    intent.putExtra("phone", phone);
+                    intent.putExtra("email", email);
+                    intent.putExtra("coords", coords);
+                    intent.putExtra("image", image);
+                    context.startActivity(intent);
+                    break;
             }
+
         }
 
         public void setTitle(String title){

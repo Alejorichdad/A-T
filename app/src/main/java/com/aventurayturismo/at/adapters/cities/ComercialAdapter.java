@@ -12,12 +12,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.aventurayturismo.at.R;
-import com.aventurayturismo.at.details.ApuloDetailActivity;
+import com.aventurayturismo.at.details.AnapoimaDetailActivity;
+import com.aventurayturismo.at.details.ComercialDetailActivity;
 import com.aventurayturismo.at.fragments.anapoima.AnapoimaFragment;
 import com.aventurayturismo.at.fragments.apulo.ApuloFragment;
 import com.aventurayturismo.at.fragments.comercial.ComercialFragment;
-import com.aventurayturismo.at.models.cities.Apulo;
-import com.aventurayturismo.at.models.detail.DetailApulo;
+import com.aventurayturismo.at.models.cities.Anapoima;
+import com.aventurayturismo.at.models.cities.Comercial;
+import com.aventurayturismo.at.models.detail.DetailAnapoima;
+import com.aventurayturismo.at.models.detail.DetailComercial;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONException;
@@ -28,8 +31,8 @@ import java.util.ArrayList;
  * Created by willians on 10/8/17.
  */
 
-public class ApuloAdapter extends RecyclerView.Adapter<ApuloAdapter.ApuloViewHolder> {
-    private ArrayList<Apulo> items;
+public class ComercialAdapter extends RecyclerView.Adapter<ComercialAdapter.ComercialViewHolder> {
+    private ArrayList<Comercial> items;
     Context context;
     private Intent intent;
     ViewPager viewPager;
@@ -41,24 +44,24 @@ public class ApuloAdapter extends RecyclerView.Adapter<ApuloAdapter.ApuloViewHol
     public String coords;
     public int image;
 
-    public class ApuloViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public class ComercialViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         // campos respectivos de un item
         public ImageView idImagen;
         public TextView titulo_imagen;
         public TextView beneficio;
         AppCompatActivity activity;
+        ComercialFragment comercialFragment;
         ApuloFragment apuloFragment;
         AnapoimaFragment anapoimaFragment;
-        ComercialFragment comercialFragment;
 
-        public ApuloViewHolder (View v){
+        public ComercialViewHolder (View v){
             super(v);
             context = v.getContext();
             itemView.setOnClickListener(this);
 
             titulo_imagen = (TextView) v.findViewById(R.id.titulo_imagen);
             beneficio = (TextView) v.findViewById(R.id.beneficio);
-            idImagen = (ImageView) v.findViewById(R.id.apulo);
+            idImagen = (ImageView) v.findViewById(R.id.comercial);
 
         }
 
@@ -69,18 +72,19 @@ public class ApuloAdapter extends RecyclerView.Adapter<ApuloAdapter.ApuloViewHol
             switch (getLayoutPosition()){
                 case 0:
                     try {
-                        title = (String) DetailApulo.getDetailApulo().getJSONObject("item1").get("title");
-                        description = (String) DetailApulo.getDetailApulo().getJSONObject("item1").get("description");
-                        phone = (String) DetailApulo.getDetailApulo().getJSONObject("item1").get("phone");
-                        email = (String) DetailApulo.getDetailApulo().getJSONObject("item1").get("email");
-                        coords = (String) DetailApulo.getDetailApulo().getJSONObject("item1").get("coords");
-                        image = (int) DetailApulo.getDetailApulo().getJSONObject("item1").get("image");
+                        title = (String) DetailComercial.getDetailComercial().getJSONObject("item1").get("title");
+                        description = (String) DetailComercial.getDetailComercial().getJSONObject("item1").get("description");
+                        phone = (String) DetailComercial.getDetailComercial().getJSONObject("item1").get("phone");
+                        email = (String) DetailComercial.getDetailComercial().getJSONObject("item1").get("email");
+                        coords = (String) DetailComercial.getDetailComercial().getJSONObject("item1").get("coords");
+                        image = (int) DetailComercial.getDetailComercial().getJSONObject("item1").get("image");
+
 
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
                     //Toast.makeText(v.getContext(), "CLIKC Alianza items", Toast.LENGTH_SHORT).show();
-                    intent = new Intent(context, ApuloDetailActivity.class);
+                    intent = new Intent(context, ComercialDetailActivity.class);
                     intent.putExtra("title", title);
                     intent.putExtra("description", description);
                     intent.putExtra("phone", phone);
@@ -91,18 +95,18 @@ public class ApuloAdapter extends RecyclerView.Adapter<ApuloAdapter.ApuloViewHol
                     break;
                 case 1:
                     try {
-                        title = (String) DetailApulo.getDetailApulo().getJSONObject("item2").get("title");
-                        description = (String) DetailApulo.getDetailApulo().getJSONObject("item2").get("description");
-                        phone = (String) DetailApulo.getDetailApulo().getJSONObject("item2").get("phone");
-                        email = (String) DetailApulo.getDetailApulo().getJSONObject("item2").get("email");
-                        coords = (String) DetailApulo.getDetailApulo().getJSONObject("item2").get("coords");
-                        image = (int) DetailApulo.getDetailApulo().getJSONObject("item2").get("image");
+                        title = (String) DetailComercial.getDetailComercial().getJSONObject("item2").get("title");
+                        description = (String) DetailComercial.getDetailComercial().getJSONObject("item2").get("description");
+                        phone = (String) DetailComercial.getDetailComercial().getJSONObject("item2").get("phone");
+                        email = (String) DetailComercial.getDetailComercial().getJSONObject("item2").get("email");
+                        coords = (String) DetailComercial.getDetailComercial().getJSONObject("item2").get("coords");
+                        image = (int) DetailComercial.getDetailComercial().getJSONObject("item2").get("image");
 
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
                     //Toast.makeText(v.getContext(), "CLIKC Alianza items", Toast.LENGTH_SHORT).show();
-                    intent = new Intent(context, ApuloDetailActivity.class);
+                    intent = new Intent(context, ComercialDetailActivity.class);
                     intent.putExtra("title", title);
                     intent.putExtra("description", description);
                     intent.putExtra("phone", phone);
@@ -113,18 +117,18 @@ public class ApuloAdapter extends RecyclerView.Adapter<ApuloAdapter.ApuloViewHol
                     break;
                 case 2:
                     try {
-                        title = (String) DetailApulo.getDetailApulo().getJSONObject("item3").get("title");
-                        description = (String) DetailApulo.getDetailApulo().getJSONObject("item3").get("description");
-                        phone = (String) DetailApulo.getDetailApulo().getJSONObject("item3").get("phone");
-                        email = (String) DetailApulo.getDetailApulo().getJSONObject("item3").get("email");
-                        coords = (String) DetailApulo.getDetailApulo().getJSONObject("item3").get("coords");
-                        image = (int) DetailApulo.getDetailApulo().getJSONObject("item3").get("image");
+                        title = (String) DetailComercial.getDetailComercial().getJSONObject("item3").get("title");
+                        description = (String) DetailComercial.getDetailComercial().getJSONObject("item3").get("description");
+                        phone = (String) DetailComercial.getDetailComercial().getJSONObject("item3").get("phone");
+                        email = (String) DetailComercial.getDetailComercial().getJSONObject("item3").get("email");
+                        coords = (String) DetailComercial.getDetailComercial().getJSONObject("item3").get("coords");
+                        image = (int) DetailComercial.getDetailComercial().getJSONObject("item3").get("image");
 
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
                     //Toast.makeText(v.getContext(), "CLIKC Alianza items", Toast.LENGTH_SHORT).show();
-                    intent = new Intent(context, ApuloDetailActivity.class);
+                    intent = new Intent(context, ComercialDetailActivity.class);
                     intent.putExtra("title", title);
                     intent.putExtra("description", description);
                     intent.putExtra("phone", phone);
@@ -135,7 +139,6 @@ public class ApuloAdapter extends RecyclerView.Adapter<ApuloAdapter.ApuloViewHol
                     break;
             }
         }
-
 
         public void setTitle(String title){
             titulo_imagen.setText(title);
@@ -155,7 +158,7 @@ public class ApuloAdapter extends RecyclerView.Adapter<ApuloAdapter.ApuloViewHol
         }
     }
 
-    public ApuloAdapter(ArrayList<Apulo> items){
+    public ComercialAdapter(ArrayList<Comercial> items){
         this.items = items;
     }
 
@@ -165,15 +168,15 @@ public class ApuloAdapter extends RecyclerView.Adapter<ApuloAdapter.ApuloViewHol
     }
 
     @Override
-    public ApuloAdapter.ApuloViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
+    public ComercialAdapter.ComercialViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View v = LayoutInflater.from(viewGroup.getContext())
-                .inflate(R.layout.apulo_card, viewGroup, false);
-        return new ApuloAdapter.ApuloViewHolder(v);
+                .inflate(R.layout.comercial_card, viewGroup, false);
+        return new ComercialAdapter.ComercialViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(ApuloAdapter.ApuloViewHolder viewHolder, int i) {
-        Apulo currentItem = items.get(i);
+    public void onBindViewHolder(ComercialAdapter.ComercialViewHolder viewHolder, int i) {
+        Comercial currentItem = items.get(i);
         viewHolder.setTitle(currentItem.getTitulo_imagen());
         viewHolder.setBenefit(currentItem.getBeneficio());
         viewHolder.setImage(currentItem.getIdImagen());

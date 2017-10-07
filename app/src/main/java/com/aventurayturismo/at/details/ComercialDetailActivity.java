@@ -2,8 +2,8 @@ package com.aventurayturismo.at.details;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.ImageView;
@@ -11,9 +11,8 @@ import android.widget.TextView;
 
 import com.aventurayturismo.at.R;
 
-import java.net.URI;
+public class ComercialDetailActivity extends AppCompatActivity {
 
-public class AnapoimaDetailActivity extends AppCompatActivity {
 
     TextView description;
     TextView title;
@@ -22,23 +21,14 @@ public class AnapoimaDetailActivity extends AppCompatActivity {
     ImageView contentImage;
     Uri gmmIntentUri;
 
-
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_anapoima_detail);
-
-
-
+        setContentView(R.layout.activity_comercial_detail);
 
         title = (TextView)findViewById(R.id.title);
         description = (TextView)findViewById(R.id.beneficio);
         contentImage = (ImageView)findViewById(R.id.idImagen);
-
 
         Bundle extras = getIntent().getExtras();
 
@@ -52,13 +42,11 @@ public class AnapoimaDetailActivity extends AppCompatActivity {
             email = extras.getString("email");
 
             gmmIntentUri = Uri.parse("geo:"+extras.getString("coords")+"?q="+extras.getString("coords")+"");
-
-
         }
 
         description.setMovementMethod(new ScrollingMovementMethod());
-
     }
+
 
     public void triggerCall(View v) {
         String number = "tel:" + phoneNumber.toString();
@@ -85,6 +73,4 @@ public class AnapoimaDetailActivity extends AppCompatActivity {
         startActivity(Intent.createChooser(emailIntent, "Send email..."));
         //Toast.makeText(v.getContext(), "Correo: ", Toast.LENGTH_LONG).show();
     }
-
-
 }

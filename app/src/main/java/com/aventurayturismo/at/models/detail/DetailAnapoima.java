@@ -30,35 +30,38 @@ public class DetailAnapoima {
 
     /* DATA */
 
-    public static String title1 = "PARAISO TERRENAL";
-    public static String description1 = "Adecuadas habitaciones especialmente pensando en tu confort nuestros planes son Desde una simple caminata, hasta una gran reunión, solo o en pareja, todos basados en la conservación de nuestra madre tierra, el mejor espacio para disfrutar de la naturaleza.";
-    public static String phone1 = "320 217 4253";
-    public static String email1 = "aldemarlatorrebuitrago@gmail.com";
-    public static int imageFile1 = R  .drawable.paraisoterrenal;
-    public static String coords1 = "4.698469, -74.433006";
+    public static String title1 = "FINCA HOTEL VILLA CRISTINA1";
+    public static String description1 = "Despertar con el dulce sonido de los pájaros el delicado olor de la naturaleza en un lugar perfecto para relajarse y pensar que la ciudad quedó atrás a una hora de camino es casi un sueño. \n" +
+            "\n" + "Finca Hotel Villa Cristina ofrece a sus huéspedes un paisaje único un bello lugar para disfrutar de la tranquilidad en un ambiente natural y el mejor clima agradable y saludable. \n" +
+            "\n" + "Aquí podrá disfrutar y explorar de la exótica naturaleza, recorriendo senderos ecológicos, que le permitirán tener un encuentro con el medio ambiente.";
+    public static String phone1 = "316 534 6489";
+    public static String email1 = " info@fincahotelvillacristina.com";
+    public static int imageFile1 = R.drawable.villa ;
+    public static String coords1 = "4.658419, -74.462371";
+
+    public static String title2 = "PARAISO TERRENAL";
+    public static String description2 = "Adecuadas habitaciones especialmente pensando en tu confort nuestros planes son Desde una simple caminata, hasta una gran reunión, solo o en pareja, todos basados en la conservación de nuestra madre tierra, el mejor espacio para disfrutar de la naturaleza.";
+    public static String phone2 = "320 217 4253";
+    public static String email2 = "aldemarlatorrebuitrago@gmail.com";
+    public static int imageFile2 = R.drawable.paraisoterrenal ;
+    public static String coords2 = "4.698469, -74.433006";
 
 
-    public static String title2 = "CENTRO COMERCIAL SAN JERÓNIMO";
-    public static String description2 = " El Centro Comercial y La Región del Tequendama y Alto Magdalena, cuenta con  lugares de exploración y aprovechamiento, que brindan experiencias productivas, lugares de contemplación, flora, fauna silvestre, espacios ideales para el turista aventurero, senderismo, ciclo montañismo, cabalgatas, recorridos en cuatrimotos, rapel, canopi, escalada, puente tibetano, barranquismo, escaladas, campin, sin dejar  a un lado los lugares del descanso total que brinda bienestar en nuestro nuevo servicio Hotel San Jerónimo. Contacto: 320 455 2215 - Email: sanjeronimo.comercial@outlook.es - http://centrocomercialsanjeronimo.com - ..";
-    public static String phone2 = "320 455 2215";
-    public static String email2 = "sanjeronimo.comercial@outlook.es";
-    public static int imageFile2 = R.drawable.sanjero;
-    public static String coords2 = "4.609013, -74.474571";
+    public static String title3 = "CENTRO COMERCIAL SAN JERÓNIMO";
+    public static String description3 = " El Centro Comercial y La Región del Tequendama y Alto Magdalena, cuenta con  lugares de exploración y aprovechamiento, que brindan experiencias productivas, lugares de contemplación, flora, fauna silvestre, espacios ideales para el turista aventurero, senderismo, ciclo montañismo, cabalgatas, recorridos en cuatrimotos, rapel, canopi, escalada, puente tibetano, barranquismo, escaladas, campin, sin dejar  a un lado los lugares del descanso total que brinda bienestar en nuestro nuevo servicio Hotel San Jerónimo. Contacto: 320 455 2215 - Email: sanjeronimo.comercial@outlook.es - http://centrocomercialsanjeronimo.com - ..";
+    public static String phone3 = "320 455 2215";
+    public static String email3 = "sanjeronimo.comercial@outlook.es";
+    public static int imageFile3 = R.drawable.sanjero;
+    public static String coords3 = "4.609013, -74.474571";
 
 
-    public static String title3 = "PUERTA TURÍSTICA LA MESA";
-    public static String description3 = "Somos una agencia donde podrás encontrar reservas para hoteles, fincas, Casas, además planes turísticos empresariales, grupos y familiares Contacto: Daniel Peñuela celular: 317 6409505 - www.puertaturisticacolombia.com/";
-    public static String phone3 = "317 6409505";
-    public static String email3 = "agenciaturisticaeinmobiliaria@gmail.com";
-    public static int imageFile3 = R.drawable.puertaturistica;
-    public static String coords3 = "4.632109, -74.462163";
+    public static String title4 = "PUERTA TURÍSTICA LA MESA";
+    public static String description4 = "Somos una agencia donde podrás encontrar reservas para hoteles, fincas, Casas, además planes turísticos empresariales, grupos y familiares Contacto: Daniel Peñuela celular: 317 6409505 - www.puertaturisticacolombia.com/";
+    public static String phone4 = "317 6409505";
+    public static String email4 = "agenciaturisticaeinmobiliaria@gmail.com";
+    public static int imageFile4 = R.drawable.puertaturistica;
+    public static String coords4 = "4.632109, -74.462163";
 
-    public static String title4 = "titulo4";
-    public static String description4 = "description4";
-    public static String phone4 = "444567";
-    public static String email4 = "some@gmail.com";
-    public static int imageFile4 = R.drawable.anapoima;
-    public static String coords4 = "37.7749,-122.4194";
 
     public static String title5 = "titulo5";
     public static String description5 = "description5";
@@ -172,6 +175,7 @@ public class DetailAnapoima {
         contentAnapoima1.put("description", description1);
         contentAnapoima1.put("phone", phone1);
         contentAnapoima1.put("email", email1);
+        contentAnapoima1.put("image", imageFile1);
         contentAnapoima1.put("image", imageFile1);
         contentAnapoima1.put("coords", coords1);
 

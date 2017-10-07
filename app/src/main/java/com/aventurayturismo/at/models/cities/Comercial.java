@@ -4,13 +4,13 @@ package com.aventurayturismo.at.models.cities;
  * Created by willians on 10/8/17.
  */
 
-public class Anapoima {
+public class Comercial {
 
     private int idImagen;
     private String titulo_imagen;
     private  String beneficio;
 
-    public Anapoima(int idImagen,  String titulo_imagen, String beneficio){
+    public Comercial(int idImagen, String titulo_imagen, String beneficio){
 
         this.idImagen = idImagen;
         this.titulo_imagen = titulo_imagen;

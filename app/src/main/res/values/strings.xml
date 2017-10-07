@@ -14,14 +14,14 @@
     <string name="apulo_title">Aventura y Adrenalina</string>
     <string name="apulo_description">Canopy, cuatrimotos, kayak</string>
 
-    <string name="anapoima_title">Bienestar y tranquilidad</string>
+    <string name="anapoima_title">Alojamiento Bienestar y tranquilidad</string>
     <string name="anapoima_description">Hoteles, Spa, descanso, piscinas</string>
 
     <string name="tocaima_title">Cómo va la Expo?</string>
     <string name="tocaima_description">Retratamos buenos momentos</string>
 
-    <string name="lamesa_title">Lamsea title</string>
-    <string name="lamesa_description">lamesa description</string>
+    <string name="lamesa_title">Donde Comer</string>
+    <string name="lamesa_description">Sabores y delicias</string>
     <string name="title_activity_adventure">AdventureActivity</string>
     <string name="title_activity_web_makute">WebMakuteActivity</string>
     <string name="title_activity_naturaleza">NaturalezaActivity</string>

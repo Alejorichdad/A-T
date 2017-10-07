@@ -161,7 +161,7 @@ public class MapsActivity extends AppCompatActivity {
             else if (getArguments().getInt(ARG_SECTION_NUMBER) == 4)
 
             {
-                View rootView = inflater.inflate(R.layout.fragment_chat, container, false);
+                View rootView = inflater.inflate(R.layout.fragment_geo, container, false);
                 return rootView;
             }
             else {
@@ -194,9 +194,9 @@ public class MapsActivity extends AppCompatActivity {
                 case 1:
                     return AdventureFragment.newInstance();
                 case 2:
-                    return ChatFragment.newInstance();
+                    return GeoFragment.newInstance();
                 case 3:
-                  return GeoFragment.newInstance();
+                  return ChatFragment.newInstance();
                 default:
                     return AdventureFragment.newInstance();
             }
@@ -205,7 +205,7 @@ public class MapsActivity extends AppCompatActivity {
         @Override
         public int getCount() {
             // Show 4 total pages.
-            return 2;
+            return 3;
         }
 
         @Override
@@ -216,7 +216,7 @@ public class MapsActivity extends AppCompatActivity {
                 case 1:
                     return "ATRACTIVOS";
                 case 2:
-                    return "DATOS";
+                    return "EVENTOS";
                 case 3:
                    return "MAPS";
             }

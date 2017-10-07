@@ -1,4 +1,4 @@
-package com.aventurayturismo.at.fragments;
+package com.aventurayturismo.at.fragments.comercial;
 
 
 import android.os.Bundle;
@@ -10,17 +10,19 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.aventurayturismo.at.R;
-import com.aventurayturismo.at.adapters.PlaceAdapter;
-import com.aventurayturismo.at.models.Place;
+import com.aventurayturismo.at.adapters.cities.ApuloAdapter;
+import com.aventurayturismo.at.adapters.cities.ComercialAdapter;
+import com.aventurayturismo.at.models.cities.Apulo;
+import com.aventurayturismo.at.models.cities.Comercial;
 
 import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link PlaceFragment#newInstance} factory method to
+ * Use the {@link ComercialFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class PlaceFragment extends Fragment {
+public class ComercialFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -31,12 +33,12 @@ public class PlaceFragment extends Fragment {
     private String mParam2;
 
 
-    public PlaceFragment() {
+    public ComercialFragment() {
         // Required empty public constructor
     }
 
-    public static PlaceFragment newInstance() {
-        PlaceFragment fragment = new PlaceFragment();
+    public static ComercialFragment newInstance() {
+        ComercialFragment fragment = new ComercialFragment();
         return fragment;
     }
 
@@ -53,31 +55,24 @@ public class PlaceFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        View v = inflater.inflate(R.layout.fragment_comercial, container, false);
+        ArrayList<Comercial> items = new ArrayList<>();
 
-        View v = inflater.inflate(R.layout.fragment_place, container, false);
+        items.add(new Comercial(R.drawable.lamesa,"",""));
+        items.add(new Comercial(R.drawable.tocaima,"",""));
+        items.add(new Comercial(R.drawable.anapoima,"",""));
+        items.add(new Comercial(R.drawable.apulo,"",""));
 
-        ArrayList<Place> items = new ArrayList<>();
-
-
-        items.add(new Place(R.drawable.delicias, this.getString(R.string.lamesa_title), this.getString(R.string.lamesa_description)));
-        items.add(new Place(R.drawable.aventura, this.getString(R.string.apulo_title), this.getString(R.string.apulo_description)));
-        items.add(new Place(R.drawable.bienestar1, this.getString(R.string.anapoima_title), this.getString(R.string.anapoima_description)));
-        items.add(new Place(R.drawable.momentos, this.getString(R.string.tocaima_title), this.getString(R.string.tocaima_description)));
-
-
-        RecyclerView recycler = (RecyclerView)v.findViewById(R.id.placeRecycler);
+        RecyclerView recycler = (RecyclerView)v.findViewById(R.id.comercialRecycler);
         recycler.setHasFixedSize(true);
 
-        PlaceAdapter adapter = new PlaceAdapter(items);
+        ComercialAdapter adapter = new ComercialAdapter(items);
         recycler.setAdapter(adapter);
 
         LinearLayoutManager layoutManager =  new LinearLayoutManager(getContext());
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recycler.setLayoutManager(layoutManager);
-
         return v;
-
-
     }
 
 }

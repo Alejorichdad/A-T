@@ -59,8 +59,10 @@
             android:label="@string/title_activity_mapsquitar" />
         <activity android:name=".cities.ApuloActivity" />
         <activity android:name=".cities.AnapoimaActivity" />
+        <activity android:name=".cities.ComercialActivity" />
         <activity android:name=".details.ApuloDetailActivity" />
         <activity android:name=".details.AnapoimaDetailActivity" />
+        <activity android:name=".details.ComercialDetailActivity" />
         <activity android:name=".adventure_details.AdventureDetailActivity" />
         <activity
             android:name=".webViews.WebMakuteActivity"
@@ -70,6 +72,8 @@
             android:name=".cities.NaturalezaActivity"
             android:label="@string/title_activity_naturaleza"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+
+
     </application>
 
 </manifest>

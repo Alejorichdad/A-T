@@ -45,7 +45,7 @@ public class MiFirebaseMessagingService extends FirebaseMessagingService {
 
     private void mostrarNotificacion(String title, String body) {
 
-        Intent intent = new Intent(this, MapsquitarActivity.class);
+        Intent intent = new Intent(this, MapsActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_ONE_SHOT);
         Uri soundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);

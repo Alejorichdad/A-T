@@ -19,17 +19,22 @@ public class AnapoimaActivity extends AppCompatActivity {
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager lManager;
 
-    public static String titulo1 = "PARAISO TERRENAL";
-    public static int imageFile1 = R.drawable.paraisoterrenal;
-    public static String description1 = "DONDE CONCENTRARSE A DESCANSAR";
 
-    public static String titulo2 = "CENTRO COMERCIAL SAN JERÓNIMO";
-    public static int imageFile2 = R.drawable.sanjero;
-    public static String description2 = "DESTINO TURÍSTICO Y COMERCIAL";
+    public static String titulo1 = "FINCA HOTEL VILLA CRISTINA";
+    public static int imageFile1 = R.drawable.villa;
+    public static String description1 = "Despertar con el dulce sonido de los pájaros el delicado olor de la naturaleza";
 
-    public static String titulo3 = "PUERTA TURÍSTICA LA MESA";
-    public static int imageFile3 = R.drawable.puertaturistica;
-    public static String description3 = "RESERVA YA TU PRÓXIMO DESTINO";
+    public static String titulo2 = "PARAISO TERRENAL";
+    public static int imageFile2 = R.drawable.paraisoterrenal;
+    public static String description2 = "DONDE CONCENTRARSE A DESCANSAR";
+
+    public static String titulo3 = "CENTRO COMERCIAL SAN JERÓNIMO";
+    public static int imageFile3 = R.drawable.sanjero;
+    public static String description3 = "DESTINO TURÍSTICO Y COMERCIAL";
+
+    public static String titulo4 = "PUERTA TURÍSTICA LA MESA";
+    public static int imageFile4 = R.drawable.puertaturistica;
+    public static String description4 = "RESERVA YA TU PRÓXIMO DESTINO";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +46,8 @@ public class AnapoimaActivity extends AppCompatActivity {
         items.add(new Anapoima(imageFile1, titulo1, description1));
         items.add(new Anapoima(imageFile2, titulo2, description2));
         items.add(new Anapoima(imageFile3, titulo3, description3));
-        //items.add(new Anapoima(imageFile1, titulo4, description1));
+        items.add(new Anapoima(imageFile4, titulo4, description4));
+
 
         recycler = (RecyclerView) findViewById(R.id.recyclerAnapoima);
         recycler.setHasFixedSize(true);
