@@ -21,6 +21,12 @@ public class ComercialActivity extends AppCompatActivity {
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager lManager;
 
+
+    public static String titulo3 = "TERRAZA GOURMET";
+    public static int imageFile3 = R.drawable.gourmet1;
+    public static String description3 = "EL MEJOR RESTAURANTE DE LA REGÍON";
+
+
     public static String titulo1 = "HELADOS EL PALACIO DEL COCO";
     public static int imageFile1 = R.drawable.helados;
     public static String description1 = "LOS MEJORES HELADOS Y PRODUCTOS DE COCO";
@@ -29,9 +35,7 @@ public class ComercialActivity extends AppCompatActivity {
     public static int imageFile2 = R.drawable.pizza;
     public static String description2 = "SERVICIO A DOMICILIOS";
 
-    public static String titulo3 = "LOS MEJORES PLANES DE AVENTRA";
-    public static int imageFile3 = R.drawable.aventura_logo;
-    public static String description3 = "SENDERISMO, CAYONING, CUERDAS Y AVENTURA";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,9 +44,11 @@ public class ComercialActivity extends AppCompatActivity {
 
         ArrayList<Comercial> items = new ArrayList<>();
 
+
+        items.add(new Comercial(imageFile3, titulo3, description3));
         items.add(new Comercial(imageFile1, titulo1, description1));
         items.add(new Comercial(imageFile2, titulo2, description2));
-        items.add(new Comercial(imageFile3, titulo3, description3));
+
 
         recycler = (RecyclerView) findViewById(R.id.recyclerComercial);
         recycler.setHasFixedSize(true);

@@ -6,6 +6,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 
 import com.aventurayturismo.at.R;
 
@@ -15,6 +17,13 @@ import com.aventurayturismo.at.R;
  * create an instance of this fragment.
  */
 public class GeoFragment extends Fragment {
+
+
+
+
+
+
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -46,8 +55,14 @@ public class GeoFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_geo, container, false);
+
+        View v = inflater.inflate(R.layout.fragment_geo, container, false);
+        WebView webView  = (WebView) v.findViewById(R.id.webViewCodea);
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.loadUrl("http://codeaya.com/videos.html");
+
+
+        return v;
     }
 
 }

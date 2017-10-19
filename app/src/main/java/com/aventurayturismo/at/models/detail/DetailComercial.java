@@ -48,13 +48,13 @@ public class DetailComercial {
     public static int imageFile2 = R.drawable.pizzadetails;
     public static String coords2 = "4.632808, -74.461800";
 
-    public static String title3 = "AVENTURA Y TURISMO";
-    public static String description3 = "Deseas hacer algo diferente\n" +
-            "Pregunta por nuestros planes de senderismo, camping, cayoning";
+    public static String title3 = "TERRAZA GOURMET";
+    public static String description3 = "El mejor restaurante de la regíon\n" +
+            "Organizamos sus fiestas y reuniones, matrimonios, cumpleaños, bautizos, bodas de oro, banquetes etc, ubicados en la calle 8 No. 17 - 98 la Mesa Cundinamarca, teléfonos: 300 400 41 96- email: terrazagourmeteventos@gmail.com";
     public static String phone3 = "3188319050";
-    public static String email3 = "alejandro@aventurayturismo.com";
-    public static int imageFile3 = R.drawable.aventura_logo;
-    public static String coords3 = "4.644939, -74.448317";
+    public static String email3 = "terrazagourmeteventos@gmail.com";
+    public static int imageFile3 = R.drawable.gourmet_lomo;
+    public static String coords3 = "4.633019, -74.461310";
 
     public static String title4 = "titulo4";
     public static String description4 = "description4";

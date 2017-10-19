@@ -216,7 +216,7 @@ public class MapsActivity extends AppCompatActivity {
                 case 1:
                     return "ATRACTIVOS";
                 case 2:
-                    return "EVENTOS";
+                    return "VIDEOS";
                 case 3:
                    return "MAPS";
             }
