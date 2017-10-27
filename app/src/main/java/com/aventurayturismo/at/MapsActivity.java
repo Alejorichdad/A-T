@@ -214,7 +214,7 @@ public class MapsActivity extends AppCompatActivity {
               case 0:
                     return "¿QUE BUSCAS?";
                 case 1:
-                    return "ATRACTIVOS";
+                    return "SERVICIOS & PRODUCTOS";
                 case 2:
                     return "VIDEOS";
                 case 3:

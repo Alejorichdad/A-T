@@ -68,6 +68,9 @@ public class AdventureAdapter extends RecyclerView.Adapter<AdventureAdapter.Adve
                     try {
                         title = (String) DetailAdventure.getDetailAdventure().getJSONObject("item1").get("title");
                         description = (String) DetailAdventure.getDetailAdventure().getJSONObject("item1").get("description");
+                        phone = (String) DetailAdventure.getDetailAdventure().getJSONObject("item1").get("phone");
+                        email = (String) DetailAdventure.getDetailAdventure().getJSONObject("item1").get("email");
+                        coords = (String) DetailAdventure.getDetailAdventure().getJSONObject("item1").get("coords");
                         image = (int) DetailAdventure.getDetailAdventure().getJSONObject("item1").get("image");
 
                     } catch (JSONException e) {
@@ -77,6 +80,9 @@ public class AdventureAdapter extends RecyclerView.Adapter<AdventureAdapter.Adve
                     intent = new Intent(context, AdventureDetailActivity.class);
                     intent.putExtra("title", title);
                     intent.putExtra("description", description);
+                    intent.putExtra("phone", phone);
+                    intent.putExtra("email", email);
+                    intent.putExtra("coords", coords);
                     intent.putExtra("image", image);
                     context.startActivity(intent);
                     break;
@@ -84,6 +90,9 @@ public class AdventureAdapter extends RecyclerView.Adapter<AdventureAdapter.Adve
                     try {
                         title = (String) DetailAdventure.getDetailAdventure().getJSONObject("item2").get("title");
                         description = (String) DetailAdventure.getDetailAdventure().getJSONObject("item2").get("description");
+                        phone = (String) DetailAdventure.getDetailAdventure().getJSONObject("item2").get("phone");
+                        email = (String) DetailAdventure.getDetailAdventure().getJSONObject("item2").get("email");
+                        coords = (String) DetailAdventure.getDetailAdventure().getJSONObject("item2").get("coords");
                         image = (int) DetailAdventure.getDetailAdventure().getJSONObject("item2").get("image");
 
                     } catch (JSONException e) {
@@ -93,6 +102,9 @@ public class AdventureAdapter extends RecyclerView.Adapter<AdventureAdapter.Adve
                     intent = new Intent(context, AdventureDetailActivity.class);
                     intent.putExtra("title", title);
                     intent.putExtra("description", description);
+                    intent.putExtra("phone", phone);
+                    intent.putExtra("email", email);
+                    intent.putExtra("coords", coords);
                     intent.putExtra("image", image);
                     context.startActivity(intent);
                     break;
@@ -100,6 +112,9 @@ public class AdventureAdapter extends RecyclerView.Adapter<AdventureAdapter.Adve
                     try {
                         title = (String) DetailAdventure.getDetailAdventure().getJSONObject("item3").get("title");
                         description = (String) DetailAdventure.getDetailAdventure().getJSONObject("item3").get("description");
+                        phone = (String) DetailAdventure.getDetailAdventure().getJSONObject("item3").get("phone");
+                        email = (String) DetailAdventure.getDetailAdventure().getJSONObject("item3").get("email");
+                        coords = (String) DetailAdventure.getDetailAdventure().getJSONObject("item3").get("coords");
                         image = (int) DetailAdventure.getDetailAdventure().getJSONObject("item3").get("image");
 
                     } catch (JSONException e) {
@@ -109,6 +124,9 @@ public class AdventureAdapter extends RecyclerView.Adapter<AdventureAdapter.Adve
                     intent = new Intent(context, AdventureDetailActivity.class);
                     intent.putExtra("title", title);
                     intent.putExtra("description", description);
+                    intent.putExtra("phone", phone);
+                    intent.putExtra("email", email);
+                    intent.putExtra("coords", coords);
                     intent.putExtra("image", image);
                     context.startActivity(intent);
                     break;
@@ -116,6 +134,9 @@ public class AdventureAdapter extends RecyclerView.Adapter<AdventureAdapter.Adve
                     try {
                         title = (String) DetailAdventure.getDetailAdventure().getJSONObject("item4").get("title");
                         description = (String) DetailAdventure.getDetailAdventure().getJSONObject("item4").get("description");
+                        phone = (String) DetailAdventure.getDetailAdventure().getJSONObject("item4").get("phone");
+                        email = (String) DetailAdventure.getDetailAdventure().getJSONObject("item4").get("email");
+                        coords = (String) DetailAdventure.getDetailAdventure().getJSONObject("item4").get("coords");
                         image = (int) DetailAdventure.getDetailAdventure().getJSONObject("item4").get("image");
 
                     } catch (JSONException e) {
@@ -125,6 +146,9 @@ public class AdventureAdapter extends RecyclerView.Adapter<AdventureAdapter.Adve
                     intent = new Intent(context, AdventureDetailActivity.class);
                     intent.putExtra("title", title);
                     intent.putExtra("description", description);
+                    intent.putExtra("phone", phone);
+                    intent.putExtra("email", email);
+                    intent.putExtra("coords", coords);
                     intent.putExtra("image", image);
                     context.startActivity(intent);
                     break;

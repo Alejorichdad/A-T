@@ -39,9 +39,12 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlaceViewHol
         public ImageView idImagen;
         public TextView titulo_imagen;
         public TextView beneficio;
-        AppCompatActivity activity;
+
+
+        /*AppCompatActivity activity;
         ApuloFragment apuloFragment;
-        AnapoimaFragment anapoimaFragment;
+        AnapoimaFragment anapoimaFragment;*/
+
 
         public PlaceViewHolder (View v){
             super(v);

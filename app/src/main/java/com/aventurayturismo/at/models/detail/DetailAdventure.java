@@ -22,7 +22,7 @@ public class DetailAdventure {
     public static String description1 = "Una de las mas hermosas rutas del municipio de La Mesa, se encuentra ubicado en la inspección de policia de La Esperanza, no solo por la gran belleza de sus paisajes sino por su alto contenido histórico, cultural y natural. Transitando por sus caminos reales construidos en la epoca de la colonia para conectar ciudades como Facatativa con La Mesa, econtramos algunos atractivos muy importantes en esta espectacular ruta. La casa del expresidente Alfonso López, las ruinas de la antigua estación del tren que permitia transportar los granos de café hacia diversas partes del país, el río apulo y sus hermosas caidas, hasta llegar a la espectacular cascada conocida como el salto de las monjas en donde podremos disfrutar de la hermosa vista que nos proporciona y de un refrescante baño en sus pozos naturales. nota de: http://www.depaseo.com.co/";
     public static String phone1 = "3188319050";
     public static String email1 = "info@aventurayturismo.com";
-    public static int imageFile1 = R.drawable.salto;
+    public static int imageFile1 = R.drawable.piscinas;
     public static String coords1 = "4.689968, -74.440387";
 
 

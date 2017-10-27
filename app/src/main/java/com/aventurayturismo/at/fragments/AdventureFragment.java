@@ -58,7 +58,7 @@ public class AdventureFragment extends Fragment {
 
         ArrayList<Adventure> items = new ArrayList<>();
 
-        items.add(new Adventure(R.drawable.salto,"",""));
+        items.add(new Adventure(R.drawable.piscinas,"",""));
         items.add(new Adventure(R.drawable.mirador,"",""));
         items.add(new Adventure(R.drawable.ocobo_amarillo,"",""));
         items.add(new Adventure(R.drawable.camino_real,"",""));
