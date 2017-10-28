@@ -18,20 +18,24 @@ public class DetailAdventure {
 
     /* DATA */
 
-    public static String title1 = "Salto de Las Monjas";
-    public static String description1 = "Una de las mas hermosas rutas del municipio de La Mesa, se encuentra ubicado en la inspección de policia de La Esperanza, no solo por la gran belleza de sus paisajes sino por su alto contenido histórico, cultural y natural. Transitando por sus caminos reales construidos en la epoca de la colonia para conectar ciudades como Facatativa con La Mesa, econtramos algunos atractivos muy importantes en esta espectacular ruta. La casa del expresidente Alfonso López, las ruinas de la antigua estación del tren que permitia transportar los granos de café hacia diversas partes del país, el río apulo y sus hermosas caidas, hasta llegar a la espectacular cascada conocida como el salto de las monjas en donde podremos disfrutar de la hermosa vista que nos proporciona y de un refrescante baño en sus pozos naturales. nota de: http://www.depaseo.com.co/";
-    public static String phone1 = "3188319050";
-    public static String email1 = "info@aventurayturismo.com";
+    public static String title1 = "PISCINAS Y MOTORES DEL AGRO";
+    public static String description1 = "Con 24 años de trayectoria en la Provincia del Tequendama, continuamos brindando calidad y cumplimiento en el diseño, instalación, calefacción y comercialización de equipos de piscina, jacuzzis, saunas y turcos; sistemas de riego automatizados; además del mercadeo, reparación y mantenimiento de máquinas para la actividad agrícola.\n" +
+            "\n" +  "Nuestra empresa cuenta con el más preciado activo “talento humano”, conformado por personal técnico, calificado que se encuentra a su servicio.";
+    public static String phone1 = "3152590749";
+    public static String email1 = "piscinas.y.motores.del.agro@hotmail.com";
     public static int imageFile1 = R.drawable.piscinas;
-    public static String coords1 = "4.689968, -74.440387";
+    public static String coords1 = "4.628443, -74.465849";
 
 
-    public static String title2 = "Mirador de la mesa";
-    public static String description2 = "Si eres amante a la naturaleza y fotografía, en la mesa podrás encontrar todo lo necesario para darte ese gusto tan especial, apreciar los amaneceres, disfrutar el atardecer y para los que gustan de la fotografía lograrán captar unas panoramicas asombrosas.  tienes dos miradores para tu deleite, mirador del Picacho y Mirador Del Rincón Santo";
+    public static String title2 = "Codeaya.com";
+    public static String description2 = "Desarrollo de proyectos web a medida\n" +
+            "\n" +
+            "Encontrar asesoría profesional para tu proyecto es crucial para tener exito, desarrollo proyectos web, aplicaciones Android & IOS\n" +
+            "Siempre estoy trabajando con lo mejor de la industria, para dar más calidad a mis clientes";
     public static String phone2 = "3188319050";
-    public static String email2 = "info@aventurayturismo.com";
-    public static int imageFile2 = R.drawable.mirador;
-    public static String coords2 = "4.626777, -74.461458";
+    public static String email2 = "alejandro@codeaya.com";
+    public static int imageFile2 = R.drawable.dev;
+    public static String coords2 = "4.539090, -74.586065";
 
 
     public static String title3 = "Arbol Ocobo";

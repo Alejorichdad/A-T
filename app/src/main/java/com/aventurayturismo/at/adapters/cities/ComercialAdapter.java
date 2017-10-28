@@ -73,6 +73,28 @@ public class ComercialAdapter extends RecyclerView.Adapter<ComercialAdapter.Come
 
                 case 0:
                     try {
+                        title = (String) DetailComercial.getDetailComercial().getJSONObject("item4").get("title");
+                        description = (String) DetailComercial.getDetailComercial().getJSONObject("item4").get("description");
+                        phone = (String) DetailComercial.getDetailComercial().getJSONObject("item4").get("phone");
+                        email = (String) DetailComercial.getDetailComercial().getJSONObject("item4").get("email");
+                        coords = (String) DetailComercial.getDetailComercial().getJSONObject("item4").get("coords");
+                        image = (int) DetailComercial.getDetailComercial().getJSONObject("item4").get("image");
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    //Toast.makeText(v.getContext(), "CLIKC Alianza items", Toast.LENGTH_SHORT).show();
+                    intent = new Intent(context, ComercialDetailActivity.class);
+                    intent.putExtra("title", title);
+                    intent.putExtra("description", description);
+                    intent.putExtra("phone", phone);
+                    intent.putExtra("email", email);
+                    intent.putExtra("coords", coords);
+                    intent.putExtra("image", image);
+                    context.startActivity(intent);
+                    break;
+
+                case 1:
+                    try {
                         title = (String) DetailComercial.getDetailComercial().getJSONObject("item3").get("title");
                         description = (String) DetailComercial.getDetailComercial().getJSONObject("item3").get("description");
                         phone = (String) DetailComercial.getDetailComercial().getJSONObject("item3").get("phone");
@@ -94,7 +116,7 @@ public class ComercialAdapter extends RecyclerView.Adapter<ComercialAdapter.Come
                     context.startActivity(intent);
                     break;
 
-                case 1:
+                case 2:
                     try {
                         title = (String) DetailComercial.getDetailComercial().getJSONObject("item1").get("title");
                         description = (String) DetailComercial.getDetailComercial().getJSONObject("item1").get("description");
@@ -118,7 +140,7 @@ public class ComercialAdapter extends RecyclerView.Adapter<ComercialAdapter.Come
                     context.startActivity(intent);
                     break;
 
-                case 2:
+                case 3:
                     try {
                         title = (String) DetailComercial.getDetailComercial().getJSONObject("item2").get("title");
                         description = (String) DetailComercial.getDetailComercial().getJSONObject("item2").get("description");
@@ -141,7 +163,10 @@ public class ComercialAdapter extends RecyclerView.Adapter<ComercialAdapter.Come
                     context.startActivity(intent);
                     break;
 
-            }
+
+                    }
+
+
         }
 
         public void setTitle(String title){

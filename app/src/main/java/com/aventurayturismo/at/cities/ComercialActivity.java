@@ -22,6 +22,10 @@ public class ComercialActivity extends AppCompatActivity {
     private RecyclerView.LayoutManager lManager;
 
 
+    public static String titulo4 = "LA ESTACION GOURMET";
+    public static int imageFile4 = R.drawable.estacionprin;
+    public static String description4 = "MARTES 2X1 EN PERRO AMAERICANO Y HAMBURGUESA TRADICIONAL";
+
     public static String titulo3 = "TERRAZA GOURMET";
     public static int imageFile3 = R.drawable.gourmet1;
     public static String description3 = "EL MEJOR RESTAURANTE DE LA REGÍON";
@@ -36,6 +40,8 @@ public class ComercialActivity extends AppCompatActivity {
     public static String description2 = "SERVICIO A DOMICILIOS";
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,9 +51,11 @@ public class ComercialActivity extends AppCompatActivity {
         ArrayList<Comercial> items = new ArrayList<>();
 
 
+        items.add(new Comercial(imageFile4,titulo4, description4));
         items.add(new Comercial(imageFile3, titulo3, description3));
         items.add(new Comercial(imageFile1, titulo1, description1));
         items.add(new Comercial(imageFile2, titulo2, description2));
+
 
 
         recycler = (RecyclerView) findViewById(R.id.recyclerComercial);

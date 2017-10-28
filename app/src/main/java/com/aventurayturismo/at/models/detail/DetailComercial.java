@@ -56,12 +56,12 @@ public class DetailComercial {
     public static int imageFile3 = R.drawable.gourmet_lomo;
     public static String coords3 = "4.633019, -74.461310";
 
-    public static String title4 = "titulo4";
-    public static String description4 = "description4";
-    public static String phone4 = "444567";
-    public static String email4 = "some@gmail.com";
-    public static int imageFile4 = R.drawable.apulo;
-    public static String coords4 = "37.7749,-122.4194";
+    public static String title4 = "LA ESTACIÓN GOURMET";
+    public static String description4 = "Las mejores comidas rápidas gran calidad en nuestros productos y procesos, perros calientes, hamburguesas, papas a la francesa, chorizo especial. entre otras delicias ";
+    public static String phone4 = "3124622409";
+    public static String email4 = "alejandro@codeaya.com";
+    public static int imageFile4 = R.drawable.laestacion;
+    public static String coords4 = "4.630507, -74.460501";
 
     public static String title5 = "titulo5";
     public static String description5 = "description5";
